@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Mali:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+body {
+  background-color: #ffffff;
+  background: #ffffff;
+  height: 100dvh;
+  font-family: 'Mali', cursive;
+  font-weight: 300;
+}
+
+#__next {
+  height: 100%;
+  background: #ffffff;
+  background-color: #ffffff;
+  font-family: 'Mali', cursive;
+
+}
