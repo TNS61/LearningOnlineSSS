@@ -129,7 +129,7 @@ export default function community() {
           <TextBlock />
         </ParallaxLayer>
         <ParallaxLayer offset={2} factor={3} speed={0.2}>
-          <City />
+          {/* <City /> */}
         </ParallaxLayer>
       </Parallax>
     </Box>
@@ -164,92 +164,92 @@ const TextBlock = () => (
   </div>
 );
 
-const City = () => {
-  const [modeCamera, setModeCamera] = useState(0);
+// const City = () => {
+//   const [modeCamera, setModeCamera] = useState(0);
 
-  const camera = useRef(null);
+//   const camera = useRef(null);
 
-  return (
-    <Box>
-      <Canvas
-        style={{
-          height: "100vh",
-          width: "100vw",
-          position: "absolute",
-          top: "0",
-          left: "0",
-          zIndex: "-1",
-        }}
-      >
-        <Suspense fallback={null}>
-          <Cloud
-            position={[0, 20, -70]}
-            segments={50}
-            bounds={[50, 10, 70]}
-            volume={30}
-          />
-          <Sky sunPosition={[100, 10, 100]} />
-          <ambientLight intensity={3} />
-          <Environment preset="city" background blur={0.5} />
+//   return (
+//     <Box>
+//       <Canvas
+//         style={{
+//           height: "100vh",
+//           width: "100vw",
+//           position: "absolute",
+//           top: "0",
+//           left: "0",
+//           zIndex: "-1",
+//         }}
+//       >
+//         <Suspense fallback={null}>
+//           <Cloud
+//             position={[0, 20, -70]}
+//             segments={50}
+//             bounds={[50, 10, 70]}
+//             volume={30}
+//           />
+//           <Sky sunPosition={[100, 10, 100]} />
+//           <ambientLight intensity={3} />
+//           <Environment preset="city" background blur={0.5} />
 
-          <Model />
-          {/* <perspectiveCamera
-            ref={camera}
-            position={[0, 5, 0]}
-            makeDefault={true}
-            zoom={1}
-          /> */}
-          <Controls />
-          {/* <OrbitControls camera={camera.current} /> */}
-        </Suspense>
-      </Canvas>
-    </Box>
-  );
-};
+//           <Model />
+//           {/* <perspectiveCamera
+//             ref={camera}
+//             position={[0, 5, 0]}
+//             makeDefault={true}
+//             zoom={1}
+//           /> */}
+//           <Controls />
+//           {/* <OrbitControls camera={camera.current} /> */}
+//         </Suspense>
+//       </Canvas>
+//     </Box>
+//   );
+// };
 
-const Model = () => {
-  const data = useGLTF(
-    "https://www.gforcesolution.com/app/2023/LearningOnlineSSS/model/city.glb"
-  );
+// const Model = () => {
+//   const data = useGLTF(
+//     "https://www.gforcesolution.com/app/2023/LearningOnlineSSS/model/city.glb"
+//   );
 
-  return (
-    <mesh scale={1} position={[100, -5, 150]}>
-      <primitive object={data.scene} />
-    </mesh>
-  );
-};
+//   return (
+//     <mesh scale={1} position={[100, -5, 150]}>
+//       <primitive object={data.scene} />
+//     </mesh>
+//   );
+// };
 
-const Controls = () => {
-  const { camera } = useThree();
-  const cameraLastPosition = useRef({
-    x: camera.position.x,
-    y: camera.position.y,
-  });
+// const Controls = () => {
+//   const { camera } = useThree();
+//   const cameraLastPosition = useRef({
+//     x: camera.position.x,
+//     y: camera.position.y,
+//   });
 
-  return (
-    <MapControls
-      onChange={(e) => {
-        const maxX = 90;
-        const minX = -90;
-        const maxY = 90;
-        const minY = -90;
-        const x = e?.target.target.x;
-        const y = e?.target.target.y;
+//   return (
+//     <MapControls
+//       onChange={(e) => {
+//         const maxX = 90;
+//         const minX = -90;
+//         const maxY = 90;
+//         const minY = -90;
+//         const x = e?.target.target.x;
+//         const y = e?.target.target.y;
 
-        if (x < minX || x > maxX) {
-          e?.target.target.setX(x < minX ? minX : maxX);
-          camera.position.setX(cameraLastPosition.current.x);
-        }
-        if (y < minY || y > maxY) {
-          e?.target.target.setY(y < minY ? minY : maxY);
-          camera.position.setY(cameraLastPosition.current.y);
-        }
-        cameraLastPosition.current.x = camera.position.x;
-        cameraLastPosition.current.y = camera.position.y;
-      }}
-      enableDamping={true}
-      maxZoom={50}
-      minZoom={100}
-    />
-  );
-};
+//         if (x < minX || x > maxX) {
+//           e?.target.target.setX(x < minX ? minX : maxX);
+//           camera.position.setX(cameraLastPosition.current.x);
+//         }
+//         if (y < minY || y > maxY) {
+//           e?.target.target.setY(y < minY ? minY : maxY);
+//           camera.position.setY(cameraLastPosition.current.y);
+//         }
+//         cameraLastPosition.current.x = camera.position.x;
+//         cameraLastPosition.current.y = camera.position.y;
+//       }}
+//       enableDamping={true}
+//       maxZoom={50}
+//       minZoom={100}
+//     />
+//   );
+// };

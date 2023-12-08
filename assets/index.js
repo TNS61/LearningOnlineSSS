@@ -76,6 +76,15 @@ import JUNGLE5 from "./images/community/jungle5.png";
 import LOGO_LAND from "./images/community/logo_land.png";
 import MAN from "./images/community/man_on_mountain.png";
 import MOUNTAINS from "./images/community/mountains.png";
+import TITLE from "./images/community/text.png";
+import LAYER2 from "./images/community/layer2.png";
+import LAYER3 from "./images/community/layer3.png";
+import FOREGROUND from "./images/community/foreground01.png";
+import ARM_LEFT from "./images/community/arm_left.png";
+import ARM_RIGHT from "./images/community/arm_right.png";
+import MEN_DANCE from "./images/community/men_dance.png"
+import WOMEN_DANCE from "./images/community/women_dance.png"
+
 
 export {
   BG_COMMUNITY,
@@ -87,4 +96,12 @@ export {
   LOGO_LAND,
   MAN,
   MOUNTAINS,
+  TITLE,
+  LAYER2,
+  LAYER3,
+  FOREGROUND,
+  ARM_LEFT,
+  ARM_RIGHT,
+  MEN_DANCE,
+  WOMEN_DANCE
 };

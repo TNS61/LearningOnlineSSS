@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath: "/app/2023/LearningOnlineSSS",
+  // basePath: "/app/2023/LearningOnlineSSS",
   reactStrictMode: true,
   trailingSlash: true,
   // env: {
@@ -17,6 +17,8 @@ const nextConfig = {
     return {
       "/": { page: "/" },
       "/community": { page: "/community" },
+      "/physical-activity/community": { page: "/physical-activity/community" },
+
 
 
     };

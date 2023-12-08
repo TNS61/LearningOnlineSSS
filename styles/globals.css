@@ -1,9 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Mali:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Mali:wght@400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --primaryColor: #282a57;
+  --secondaryColor: #e4e4e4;
+}
 
 ::-webkit-scrollbar {
   width: 20px;
@@ -24,11 +28,15 @@
   background-clip: content-box;
 }
 
+html {
+  scroll-behavior: smooth !important;
+}
+
 body {
   background-color: #ffffff;
   background: #ffffff;
   height: 100dvh;
-  font-family: 'Mali', cursive;
+  font-family: "Mali", cursive;
   font-weight: 300;
 }
 
@@ -36,14 +44,8 @@ body {
   height: 100%;
   background: #ffffff;
   background-color: #ffffff;
-  font-family: 'Mali', cursive;
-
+  font-family: "Mali", cursive;
 }
-
-
-
-
-
 
 /* /////////////////////////////////////////////////////////// */
 
@@ -77,11 +79,10 @@ body {
   position: fixed;
   width: 100%;
   bottom: 0px;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   margin-bottom: 20px;
-
 }
 
 #textblock-devsense {
@@ -91,24 +92,154 @@ body {
   font-weight: 600;
 }
 
-.animation, .animation_layer {
-	height: 1000px;
+.animation,
+.animation_layer {
+  height: 1000px;
 }
 
 .animation {
   display: block;
-	position: relative;
-	z-index: 10;
+  position: relative;
+  z-index: 10;
 }
 
 .animation_layer {
-	background-position: bottom center;
-	background-size: auto 1038px;
-	background-repeat: repeat-x;
-	width: 100%;
-	position: absolute;
+  background-position: bottom center;
+  background-size: auto 1038px;
+  background-repeat: repeat-x;
+  width: 100%;
+  position: absolute;
 }
 .animation_layer.parallax {
-	position: fixed;
+  position: fixed;
 }
 
+/* #################################################### */
+
+.parallax-outer {
+  overflow: hidden;
+}
+
+.parallax {
+  height: 100dvh;
+  width: 100%;
+  position: relative;
+}
+
+
+.layer1,
+.layer2,
+.layer3 {
+  width: 100%;
+  bottom: 0;
+  z-index: 3;
+  position: absolute;
+}
+
+.layer1 {
+  bottom: -500px;
+  z-index: 3;
+}
+.layer2 {
+  bottom: -500px;
+  z-index: 2;
+}
+
+.layer3 {
+  bottom: -500px;
+  z-index: 1;
+}
+
+.title {
+  /* height: 100vh; */
+ position: absolute;
+ top: 30%;
+ z-index: 99;
+ left: 50%;
+ transform: translateX(-50%);
+ display: flex;
+ align-items: center;
+  justify-content: center;
+}
+
+
+
+.about {
+  color: var(--secondaryColor);
+  padding-left: 10%;
+  padding-bottom: 20%;
+}
+
+.about h2 {
+  color: var(--secondaryColor);
+  font-size: 5rem;
+}
+
+.about p {
+  margin-top: 20px;
+  width: 50%;
+}
+
+
+/* animation arm */
+.arm-left{
+
+  animation: arm-left 0.75s ease-in-out infinite alternate;
+
+
+}
+
+.arm-right{
+
+  animation: arm-right 0.75s ease-in-out infinite alternate;
+}
+
+.title-header{
+animation: title-header 0.75s ease-in-out infinite alternate;
+}
+
+@keyframes arm-left {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(10deg);
+  }
+}
+
+@keyframes arm-right {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+
+@keyframes title-header {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+
+.men-dance{
+  animation: men-dance 0.75s ease-in-out infinite alternate;
+
+}
+
+.women-dance{
+  animation: men-dance 0.75s ease-in-out infinite alternate;
+}
+
+@keyframes men-dance {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
