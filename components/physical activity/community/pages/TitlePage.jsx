@@ -4,6 +4,8 @@ import {
   FOREGROUND,
   LAYER2,
   LAYER3,
+  LAYER3_LEFT,
+  LAYER3_RIGHT,
   TITLE,
 } from "@/assets";
 import { Box } from "@mui/material";
@@ -16,26 +18,25 @@ import {
   LAYER2_LEFT,
   LAYER2_MID,
   LAYER2_RIGHT,
-  LAYER3_LEFT,
-  LAYER3_RIGHT,
   TREE_FOREGROUND,
 } from "../../../../assets";
+import {motion} from "framer-motion"
 
 export default function TitlePage() {
   const target = React.useRef(null);
-  const topCityParallax = useParallax({
-    speed: 30,
-    easing: "easeInOutCirc",
-    targetElement: target.current,
-  });
+
+  // const topCityParallax = useParallax({
+  //   speed: 30,
+  //   easing: "easeInOutCirc",
+  //   targetElement: target.current,
+  // });
   // const middleCityParallax = useParallax({
   //   speed: 40,
   //   targetElement: target.current,
   //   startScroll: 0.8,
   // });
   const bottomCityParallax = useParallax({
-    speed: 40,
-    easing: "easeInOut",
+    speed: 50,
     targetElement: target.current,
     translateX: [-100, 100],
   });
@@ -47,15 +48,26 @@ export default function TitlePage() {
   });
 
   const centerMiddleCityParallax = useParallax({
-    speed: 30,
+    speed: 20,
     targetElement: target.current,
     startScroll: 2,
   });
 
   const rightMiddleCityParallax = useParallax({
-    speed: 55,
+    speed: 60,
     targetElement: target.current,
     startScroll: 0.6,
+  });
+
+  const leftTopCity = useParallax({
+    speed: 45,
+    targetElement: target.current,
+  });
+
+  const rightTopCity = useParallax({
+    speed: 70,
+    targetElement: target.current,
+    startScroll: 0.4,
   });
 
   useEffect(() => {
@@ -131,9 +143,9 @@ export default function TitlePage() {
         <div
           ref={bottomCityParallax.ref}
           data-aos="fade-up"
-          data-aos-duration="2000"
+          data-aos-duration="1500"
           data-aos-anchor-placement="top-bottom"
-          className="absolute bottom-[1%] left-0 z-[2]"
+          className="absolute bottom-[3%] left-0 z-[2]"
         >
           <Image
             src={FOREGROUND.src}
@@ -190,34 +202,37 @@ export default function TitlePage() {
         </div>
 
         <div
-          ref={topCityParallax.ref}
+          // ref={topCityParallax.ref}
           data-aos="fade-up"
           data-aos-duration="1000"
           data-aos-anchor-placement="top-bottom"
-          className="absolute bottom-[1%] left-0 z-[0] bg-red-500"
+          className=" bottom-[1%] left-0 z-[0]"
         >
           {/* <Image
-            src={LAYER3.src}
+            src={LAYER3_LEFT.src}
             width={1280}
             height={1280}
             alt="LAYER3"
             className="w-full "
             draggable={false}
           /> */}
+
           <Image
+            ref={leftTopCity.ref}
             src={LAYER3_LEFT.src}
             width={1280}
             height={1280}
             alt="LAYER3_LEFT"
-            className="w-full absolute left-0 top-0"
+            className="w-full absolute left-0 top-0 "
             draggable={false}
           />
           <Image
+            ref={rightTopCity.ref}
             src={LAYER3_RIGHT.src}
             width={1280}
             height={1280}
             alt="LAYER3"
-            className="w-full absolute left-0 top-0"
+            className="w-full absolute left-0 top-0 "
             draggable={false}
           />
         </div>
@@ -230,7 +245,7 @@ export default function TitlePage() {
             properties: [
               {
                 startValue: 1,
-                endValue: 2,
+                endValue: 2.5,
                 property: "scale",
               },
               {
@@ -250,7 +265,8 @@ export default function TitlePage() {
         }}
         className=""
       >
-        <Image
+        <motion.img
+        onScroll={{}}
           src={TREE_FOREGROUND.src}
           width={1280}
           height={1280}

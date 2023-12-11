@@ -15,9 +15,14 @@ import { useParallax } from "react-scroll-parallax";
 export default function DescriptionPage() {
   const target = useRef(null);
 
+  // const bottomCityParallax = useParallax({
+  //   speed: 40,
+  //   targetElement: target.current,
+  //   translateX: [-110, 100],
+  // });
+
   return (
     <Box
-      ref={target}
       sx={{
         height: "100dvh",
         width: "100% !important",
@@ -42,7 +47,7 @@ export default function DescriptionPage() {
             className="w-[300px] z-20  relative "
             draggable={false}
             whileHover={{ scale: 1.1 }}
-            animate={{ y: [0, 5, -20], rotate: [0, 0, 0] }}
+            animate={{ y: [0, 5, -25], rotate: [0, 0, 0] }}
             transition={{
               repeat: Infinity,
               duration: 0.75,
@@ -190,7 +195,7 @@ export default function DescriptionPage() {
 
       <div
         data-aos="fade-up"
-        data-aos-duration="2000"
+        data-aos-duration="1500"
         data-aos-anchor-placement="top-bottom"
         className="absolute bottom-[1%] left-0 z-[2]"
       >

@@ -93,6 +93,11 @@ import LAYER2_RIGHT from "./images/community/layer2_Right.png";
 import LAYER3_LEFT from "./images/community/layer3_Left.png";
 import LAYER3_RIGHT from "./images/community/layer3_Right.png";
 
+import EXCERCISE from "./images/community/Exercise.png";
+import CHECK_UP from "./images/community/Checkup.png";
+import REST from "./images/community/Rest.png";
+import TENSE from "./images/community/Tense.png";
+
 export {
   BG_COMMUNITY,
   JUNGLE1,
@@ -117,4 +122,8 @@ export {
   LAYER2_RIGHT,
   LAYER3_LEFT,
   LAYER3_RIGHT,
+  EXCERCISE,
+  CHECK_UP,
+  REST,
+  TENSE,
 };

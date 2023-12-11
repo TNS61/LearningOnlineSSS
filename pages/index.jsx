@@ -87,7 +87,7 @@ export default function Home() {
           position: "relative",
         }}
       >
-        <Image
+        {/* <Image
           src={LOGO.src}
           width={512}
           height={512}
@@ -102,7 +102,16 @@ export default function Home() {
           alt="logo"
           className="h-[400px] w-auto  lg:h-auto lg:w-full  object-cover"
           draggable={false}
-        />
+        /> */}
+               <video
+          playsInline
+          muted
+          autoPlay
+          loop
+          className="w-full h-full object-cover z-50"
+        >
+          <source src="/Home_01.mp4" type="video/mp4" />
+        </video>
       </Box>
       <Box
         sx={{
