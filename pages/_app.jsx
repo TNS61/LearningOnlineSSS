@@ -1,5 +1,3 @@
-
-
 import { FAVICON, LOGO } from "@/assets";
 import "@/styles/globals.css";
 import { CssBaseline, ThemeProvider, createTheme } from "@mui/material";
@@ -18,14 +16,13 @@ export default function App({ Component, pageProps }) {
 
   return (
     <ParallaxProvider>
-    <ThemeProvider theme={theme}>
-      <SEO pathname={pathname} />
-      <CssBaseline />
+      <ThemeProvider theme={theme}>
+        <SEO pathname={pathname} />
+        <CssBaseline />
 
-      <Component {...pageProps} />
-    </ThemeProvider>
+        <Component {...pageProps} />
+      </ThemeProvider>
     </ParallaxProvider>
-
   );
 }
 

@@ -1,6 +1,4 @@
 import {
-  BG_HOME,
-  BG_MAP,
   BTN_1,
   BTN_1_EN,
   BTN_2,
@@ -17,8 +15,7 @@ import {
   BTN_7_EN,
   BTN_8,
   BTN_8_EN,
-  LOGO,
-  PIN_COMMUNITY,
+
 } from "@/assets";
 import Bar from "@/components/Bar";
 import CommunityScene from "@/components/CommunityScene";
@@ -27,8 +24,7 @@ import { Box, Button, IconButton } from "@mui/material";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
-import ThreeDRotationIcon from "@mui/icons-material/ThreeDRotation";
-import PanoramaIcon from "@mui/icons-material/Panorama";
+
 export default function Home() {
   const router = useRouter();
 
@@ -87,22 +83,31 @@ export default function Home() {
           position: "relative",
         }}
       >
-        <Image
+        {/* <Image
           src={LOGO.src}
           width={512}
           height={512}
           alt="logo"
           draggable={false}
           className="w-[20%] h-auto object-contain absolute top-[20%]  lg:top-[12%] left-[50%] translate-x-[-50%]"
-        />
-        <Image
+        /> */}
+        {/* <Image
           src={BG_HOME.src}
           width={512}
           height={512}
           alt="logo"
           className="h-[400px] w-auto  lg:h-auto lg:w-full  object-cover"
           draggable={false}
-        />
+        /> */}
+        <video
+          playsInline
+          muted
+          autoPlay
+          loop
+          className="w-full h-full object-cover z-50"
+        >
+          <source src="/Home_01.mp4" type="video/mp4" />
+        </video>
       </Box>
       <Box
         sx={{
@@ -175,10 +180,18 @@ export default function Home() {
           {
             title == 3 && <>
               <button
-                onClick={() => router.push('/physical-activity/community/#home')}
-
+                onClick={() =>
+                  router.push("/physical-activity/community/#home")
+                }
               >
-                <Image src={PIN_COMMUNITY.src} width={512} height={512} alt='logo' className='h-24 w-auto object-contain absolute top-[55%] left-[20%] animate-bounce ' draggable={false} />
+                <Image
+                  src={PIN_COMMUNITY.src}
+                  width={512}
+                  height={512}
+                  alt="logo"
+                  className="h-24 w-auto object-contain absolute top-[55%] left-[20%] animate-bounce "
+                  draggable={false}
+                />
               </button>
             </>
           } */}
