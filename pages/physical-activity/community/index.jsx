@@ -68,7 +68,7 @@ export default function Community() {
       </Box>
       <Box
         id="description"
-       
+
         // className="pt-20 flex flex-col  items-center gap-10"
       >
         <DescriptionPage />
