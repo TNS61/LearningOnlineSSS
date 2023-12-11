@@ -1,7 +1,3 @@
-import { useRef, useEffect, useState } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import Image from "next/image";
 import {
   ARM_LEFT,
   ARM_RIGHT,
@@ -11,110 +7,122 @@ import {
   TITLE,
 } from "@/assets";
 import { Box } from "@mui/material";
+import Image from "next/image";
+import React, { useEffect } from "react";
+import AOS from "aos";
 
-function TitlePage() {
-  const parallaxRef = useRef(null);
-  const layer1 = useRef(null);
-  const layer2 = useRef(null);
-  const layer3 = useRef(null);
-  const title = useRef(null);
-
+export default function TitlePage() {
   useEffect(() => {
-    let ctx = gsap.context(() => {
-      gsap.registerPlugin(ScrollTrigger);
-      var tl = gsap.timeline({
-        defaults: { duration: 1.5 },
-        scrollTrigger: {
-          trigger: parallaxRef.current,
-          start: "0",
-          end: "2000 bottom",
-          scrub: true,
-          pin: true,
-          // scrub: 1,
-          // smoothChildTiming: true,
-        },
-      });
-      tl.to(
-        layer1.current,
-        {
-          y: "-500",
-        },
-        0.2
-      );
-      tl.to(
-        layer2.current,
-        {
-          y: "-450",
-        },
-        0.1
-      );
-      tl.to(
-        layer3.current,
-        {
-          y: "-450",
-        },
-        0
-      );
-
-      tl.to(
-        title.current,
-        {
-          y: "-40%",
-          opacity: 1,
-        },
-       0
-      );
-
-      return tl;
-
-    });
-    return () => ctx.revert();
+    AOS.init();
   }, []);
-
   return (
-    <div className="parallax-outer">
-      <div
-        ref={parallaxRef}
-        style={{
-          backgroundColor: "#FFF2C6",
+    <Box
+      sx={{
+        height: "100dvh",
+        position: "relative",
+      }}
+    >
+      {/* ส่วนชื่อ */}
+      <Box
+        data-aos="fade-up"
+        data-aos-duration="2000"
+        sx={{
+          position: "relative",
+          top: "30%",
+          zIndex: "10",
         }}
-        className="parallax"
       >
-        <img ref={layer1} className="layer1" src={FOREGROUND.src} />
-        <img ref={layer2} className="layer2" src={LAYER2.src} />
-        <img ref={layer3} className="layer3" src={LAYER3.src} />
+        <Box
+          sx={{
+            position: "absolute",
+            width: "fit-content !important",
+            left: "50%",
+            top: "50%",
+            transform: "translate(-50%,-50%)",
+            zIndex: "10",
+          }}
+        >
+          <Image
+            src={TITLE.src}
+            width={512}
+            height={512}
+            alt="title"
+            className="w-[500px] z-20 title-header relative"
+            draggable={false}
+          />
+          <Image
+            src={ARM_LEFT.src}
+            width={512}
+            height={512}
+            alt="ARM_LEFT"
+            className="w-[50%] absolute bottom-[-23%] left-[-20%] arm-left"
+            draggable={false}
+          />
+          <Image
+            src={ARM_RIGHT.src}
+            width={512}
+            height={512}
+            alt="ARM_RIGHT"
+            className="w-[50%] absolute bottom-[-23%]  right-[-20%] arm-right"
+            draggable={false}
+          />
+        </Box>
+      </Box>
 
-        <div ref={title} className="title">
-          <Box className="flex justify-center items-center h-full relative">
-            <Image
-              src={TITLE.src}
-              width={512}
-              height={512}
-              alt="title"
-              className="w-[70%] z-20 title-header"
-              draggable={false}
-            />
-            <Image
-              src={ARM_LEFT.src}
-              width={512}
-              height={512}
-              alt="title"
-              className="w-[35%] absolute bottom-[-23%] left-0 arm-left"
-              draggable={false}
-            />
-            <Image
-              src={ARM_RIGHT.src}
-              width={512}
-              height={512}
-              alt="title"
-              className="w-[35%] absolute bottom-[-23%]  right-0 arm-right"
-              draggable={false}
-            />
-          </Box>
+      {/* เมือง */}
+      <Box
+        sx={{
+          position: "relative",
+          width: "100% !important",
+          height: "100% !important",
+        }}
+      >
+        <div
+          data-aos="fade-up"
+          data-aos-duration="2000"
+          data-aos-anchor-placement="top-bottom"
+          className="absolute bottom-[1%] left-0 z-[2]"
+        >
+          <Image
+            src={FOREGROUND.src}
+            width={1280}
+            height={1280}
+            alt="FOREGROUND"
+            className="w-full "
+            draggable={false}
+          />
         </div>
-      </div>
-    </div>
+        <div
+          data-aos="fade-up"
+          data-aos-duration="1500"
+          data-aos-anchor-placement="top-bottom"
+          className="absolute bottom-[1%] left-0 z-[1]"
+        >
+          <Image
+            src={LAYER2.src}
+            width={1280}
+            height={1280}
+            alt="LAYER2"
+            className="w-full "
+            draggable={false}
+          />
+        </div>
+        <div
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-anchor-placement="top-bottom"
+          className="absolute bottom-[1%] left-0 z-[0]"
+        >
+          <Image
+            src={LAYER3.src}
+            width={1280}
+            height={1280}
+            alt="LAYER3"
+            className="w-full "
+            draggable={false}
+          />
+        </div>
+      </Box>
+    </Box>
   );
 }
-
-export default TitlePage;

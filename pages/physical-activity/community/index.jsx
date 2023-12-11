@@ -23,6 +23,11 @@ import {
 } from "@/assets";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import TitlePage from "@/components/TitlePage";
+import { Description } from "@mui/icons-material";
+import DescriptionPage from "@/components/DescriptionPage";
+import ScrollAnimation from "react-animate-on-scroll";
+import "animate.css/animate.min.css";
 export default function Community() {
   useEffect(() => {
     AOS.init({
@@ -54,219 +59,24 @@ export default function Community() {
       <Box
         id="home"
         sx={{
-          height: "110dvh",
+          height: "100dvh",
           backgroundColor: "#FFF2C6 !important",
           position: "relative",
         }}
       >
-        {/* ส่วนชื่อ */}
-        <Box
-          sx={{
-            position: "absolute",
-            width: "fit-content !important",
-            left: "50%",
-            top: "30%",
-            transform: "translate(-50%,-50%)",
-            zIndex: "10",
-          }}
-        >
-          <Image
-            src={TITLE.src}
-            width={512}
-            height={512}
-            alt="title"
-            className="w-[500px] z-20 title-header relative"
-            draggable={false}
-          />
-          <Image
-            src={ARM_LEFT.src}
-            width={512}
-            height={512}
-            alt="ARM_LEFT"
-            className="w-[50%] absolute bottom-[-23%] left-[-20%] arm-left"
-            draggable={false}
-          />
-          <Image
-            src={ARM_RIGHT.src}
-            width={512}
-            height={512}
-            alt="ARM_RIGHT"
-            className="w-[50%] absolute bottom-[-23%]  right-[-20%] arm-right"
-            draggable={false}
-          />
-        </Box>
-
-        {/* เมือง */}
-        <Box
-          sx={{
-            position: "relative",
-            width: "100% !important",
-            height: "100% !important",
-          }}
-        >
-          <div
-            data-aos="fade-up"
-            data-aos-duration="2000"
-            data-aos-anchor-placement="top-bottom"
-            className="absolute bottom-[9%] left-0 z-[2]"
-          >
-            <Image
-              src={FOREGROUND.src}
-              width={1280}
-              height={1280}
-              alt="FOREGROUND"
-              className="w-full "
-              draggable={false}
-            />
-          </div>
-          <div
-            data-aos="fade-up"
-            data-aos-duration="1500"
-            data-aos-anchor-placement="top-bottom"
-            className="absolute bottom-[2%] left-0 z-[1]"
-          >
-            <Image
-              src={LAYER2.src}
-              width={1280}
-              height={1280}
-              alt="LAYER2"
-              className="w-full "
-              draggable={false}
-            />
-          </div>
-          <div
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            data-aos-anchor-placement="top-bottom"
-            className="absolute bottom-[5%] left-0 z-[0]"
-          >
-            <Image
-              src={LAYER3.src}
-              width={1280}
-              height={1280}
-              alt="LAYER3"
-              className="w-full "
-              draggable={false}
-            />
-          </div>
-        </Box>
-
-        {/* <TitlePage /> */}
+        <TitlePage />
       </Box>
       <Box
         id="description"
-        sx={{
-          height: "110dvh",
-          width: "100% !important",
-          backgroundColor: "#FFF2C6 !important",
-          position: "relative",
-        }}
-        className="pt-20 flex flex-col  items-center gap-10"
+       
+        // className="pt-20 flex flex-col  items-center gap-10"
       >
-        <Box className="relative">
-          <Image
-            src={TITLE.src}
-            width={512}
-            height={512}
-            alt="title"
-            className="w-[300px] z-20 title-header relative "
-            draggable={false}
-          />
-          <Image
-            src={ARM_LEFT.src}
-            width={512}
-            height={512}
-            alt="ARM_LEFT"
-            className="w-[50%] absolute bottom-[-23%] left-[-20%] arm-left"
-            draggable={false}
-          />
-          <Image
-            src={ARM_RIGHT.src}
-            width={512}
-            height={512}
-            alt="ARM_RIGHT"
-            className="w-[50%] absolute bottom-[-23%]  right-[-20%] arm-right"
-            draggable={false}
-          />
-        </Box>
-
-        <Container maxWidth="md">
-          <div
-            className=""
-            data-aos="fade-up"
-            data-aos-anchor-placement="top-bottom"
-          >
-            <Typography
-              sx={{
-                textAlign: "center",
-                // fontSize: "1.5rem",
-              }}
-            >
-              สังคมเมืองยุคปัจจุบัน ที่หลายคนต้องจดจ่อกับหน้าที่การงาน การเรียน
-              จนทำให้ละเลยหรือไม่มีเวลาสำหรับสุขภาพตัวเองมากนัก การออกกำลังกาย
-              ถือเป็นวัคซีนชั้นดี ที่ไม่มีใครสามารถผลิตได้ ฉะนั้น
-              การออกกำลังกายจึงต้องสร้างขึ้นด้วยตัวเอง
-              ซึ่งการออกกำลังกายไม่จำเป็นต้องลงทุนอะไร เพราะอยู่ที่ไหน ใครๆ
-              ก็สามารถออกกำลังกายได้
-            </Typography>
-          </div>
-
-          <div className="mt-10" data-aos="flip-left">
-            <Typography
-              sx={{
-                textAlign: "center",
-                color: "#F37520",
-                fontSize: "1.7rem",
-                fontWeight: "bold",
-              }}
-            >
-              จะรอช้าทำไม ลุกขึ้นมาขยับกันได้ทันที!!
-            </Typography>
-          </div>
-        </Container>
-        <div data-aos="zoom-up" className="relative h-full w-full z-20 flex-grow">
-          <div className="absolute bottom-[4%] right-[20%]">
-            <Image
-              src={MEN_DANCE.src}
-              width={1280}
-              height={1280}
-              alt="FOREGROUND"
-              className="h-[400px] w-auto object-contain men-dance"
-              draggable={false}
-            />
-          </div>
-          <div className="absolute bottom-[4%] left-[20%]">
-            <Image
-              src={WOMEN_DANCE.src}
-              width={1280}
-              height={1280}
-              alt="FOREGROUND"
-              className="h-[400px] w-auto object-contain men-dance"
-              draggable={false}
-            />
-          </div>
-        </div>
-
-        <div
-          data-aos="fade-up"
-          data-aos-duration="2000"
-          data-aos-anchor-placement="top-bottom"
-          className="absolute bottom-[9%] left-0 z-[2]"
-        >
-          <Image
-            src={FOREGROUND.src}
-            width={1280}
-            height={1280}
-            alt="FOREGROUND"
-            className="w-full "
-            draggable={false}
-          />
-        </div>
+        <DescriptionPage />
       </Box>
 
       {/* สถานการณ์ */}
 
-      <Box
+      {/* <Box
         sx={{
           height: "110dvh",
           backgroundColor: "#FFF2C6 !important",
@@ -286,9 +96,9 @@ export default function Community() {
             สถานการณ์
           </Typography>
         </div>
-      </Box>
+      </Box> */}
       {/* กระบวนการดำเนินงาน */}
-      <Box
+      {/* <Box
         sx={{
           height: "110dvh",
           backgroundColor: "#FFF2C6 !important",
@@ -306,10 +116,10 @@ export default function Community() {
         >
           กระบวนการดำเนินงาน
         </Typography>
-      </Box>
+      </Box> */}
 
       {/* เครื่องมือเสริมการทำงาน */}
-      <Box
+      {/* <Box
         sx={{
           height: "110dvh",
           backgroundColor: "#FFF2C6 !important",
@@ -327,10 +137,10 @@ export default function Community() {
         >
           เครื่องมือเสริมการทำงาน
         </Typography>
-      </Box>
+      </Box> */}
 
       {/* กรณีศึกษา */}
-      <Box
+      {/* <Box
         sx={{
           height: "110dvh",
           backgroundColor: "#FFF2C6 !important",
@@ -348,7 +158,7 @@ export default function Community() {
         >
           กรณีศึกษา
         </Typography>
-      </Box>
+      </Box> */}
       {/* อื่นๆ ที่เกี่ยวข้อง */}
     </Box>
   );
@@ -396,11 +206,19 @@ const MenuBar = () => {
         </MenuItem>
         <MenuItem
           onClick={() => {
+            router.push("/physical-activity/community/#description");
+          }}
+        >
+          รายละเอียด
+        </MenuItem>
+        <MenuItem
+          onClick={() => {
             router.push("/physical-activity/community/#situation");
           }}
         >
           สถานการณ์
         </MenuItem>
+
         <MenuItem
           onClick={() => {
             router.push("/physical-activity/community/#process");

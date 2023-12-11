@@ -18,9 +18,6 @@ const nextConfig = {
       "/": { page: "/" },
       "/community": { page: "/community" },
       "/physical-activity/community": { page: "/physical-activity/community" },
-
-
-
     };
   },
 };
