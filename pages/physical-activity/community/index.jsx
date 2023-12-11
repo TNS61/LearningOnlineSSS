@@ -1,33 +1,14 @@
-import {
-  Box,
-  Button,
-  Container,
-  IconButton,
-  Menu,
-  MenuItem,
-  Typography,
-} from "@mui/material";
-import React, { useEffect, useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
-import { useRouter } from "next/router";
-import Image from "next/image";
-import {
-  ARM_LEFT,
-  ARM_RIGHT,
-  FOREGROUND,
-  LAYER2,
-  LAYER3,
-  MEN_DANCE,
-  TITLE,
-  WOMEN_DANCE,
-} from "@/assets";
+import { Box, IconButton, Menu, MenuItem } from "@mui/material";
+import "animate.css/animate.min.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import TitlePage from "@/components/TitlePage";
-import { Description } from "@mui/icons-material";
-import DescriptionPage from "@/components/DescriptionPage";
-import ScrollAnimation from "react-animate-on-scroll";
-import "animate.css/animate.min.css";
+import { useRouter } from "next/router";
+import React, { useEffect, useState } from "react";
+import TitlePage from "../../../components/physical activity/community/pages/TitlePage";
+import DescriptionPage from "../../../components/physical activity/community/pages/DescriptionPage";
+import SituationPage from "../../../components/physical activity/community/pages/SituationPage";
+
 export default function Community() {
   useEffect(() => {
     AOS.init({
@@ -68,7 +49,6 @@ export default function Community() {
       </Box>
       <Box
         id="description"
-       
         // className="pt-20 flex flex-col  items-center gap-10"
       >
         <DescriptionPage />
@@ -76,15 +56,15 @@ export default function Community() {
 
       {/* สถานการณ์ */}
 
-      {/* <Box
-        sx={{
-          height: "110dvh",
-          backgroundColor: "#FFF2C6 !important",
-          pt: "10rem",
-        }}
+      <Box
+        // sx={{
+        //   height: "110dvh",
+        //   backgroundColor: "#FFF2C6 !important",
+        //   pt: "10rem",
+        // }}
         id="situation"
       >
-        <div data-aos="fade-up">
+        {/* <div data-aos="fade-up">
           <Typography
             sx={{
               fontSize: "4rem",
@@ -95,8 +75,10 @@ export default function Community() {
           >
             สถานการณ์
           </Typography>
-        </div>
-      </Box> */}
+        </div> */}
+        <SituationPage />
+      </Box>
+
       {/* กระบวนการดำเนินงาน */}
       {/* <Box
         sx={{

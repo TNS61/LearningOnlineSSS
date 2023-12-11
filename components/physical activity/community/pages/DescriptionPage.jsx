@@ -6,13 +6,18 @@ import {
   TITLE,
   WOMEN_DANCE,
 } from "@/assets";
+import { motion } from "framer-motion";
 import { Box, Container, Typography } from "@mui/material";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import { useParallax } from "react-scroll-parallax";
 
 export default function DescriptionPage() {
+  const target = useRef(null);
+
   return (
     <Box
+      ref={target}
       sx={{
         height: "100dvh",
         width: "100% !important",
@@ -29,14 +34,24 @@ export default function DescriptionPage() {
     >
       <Box className="flex justify-center items-center">
         <Box className="relative w-fit">
-          <Image
+          <motion.img
             src={TITLE.src}
             width={512}
             height={512}
             alt="title"
-            className="w-[300px] z-20 title-header relative "
+            className="w-[300px] z-20  relative "
             draggable={false}
+            whileHover={{ scale: 1.1 }}
+            animate={{ y: [0, 5, -20], rotate: [0, 0, 0] }}
+            transition={{
+              repeat: Infinity,
+              duration: 0.75,
+              times: [0, 0.5, 1],
+              easings: ["easeInOut", "easeInOut", "easeInOut"],
+              repeatType: "mirror",
+            }}
           />
+
           <Image
             src={ARM_LEFT.src}
             width={512}
@@ -100,25 +115,55 @@ export default function DescriptionPage() {
             position: "relative",
           }}
         >
-          <div className="absolute bottom-0 right-[20%]">
-            <Image
+          <div className="absolute bottom-10 right-[20%]">
+            <motion.img
+              data-aos="zoom-in"
+              src={MEN_DANCE.src}
+              width={1280}
+              height={1280}
+              alt="FOREGROUND"
+              className="h-[400px] w-auto object-contain"
+              draggable={false}
+              animate={{ x: [10, -10, 0], y: [0, 0, -20], rotate: [0, 5, 0] }}
+              transition={{
+                repeat: Infinity,
+                duration: 0.8,
+                times: [0, 0.4, 1],
+                repeatType: "mirror",
+              }}
+            />
+            {/* <Image
               src={MEN_DANCE.src}
               width={1280}
               height={1280}
               alt="FOREGROUND"
               className="h-[400px] w-auto object-contain men-dance"
               draggable={false}
-            />
+            /> */}
           </div>
-          <div className="absolute bottom-0 left-[20%]">
-            <Image
+          <div className="absolute bottom-10 left-[20%]">
+            <motion.img
+              src={WOMEN_DANCE.src}
+              width={1280}
+              height={1280}
+              alt="FOREGROUND"
+              className="h-[400px] w-auto object-contain "
+              draggable={false}
+              animate={{ x: [10, -10, 10], rotate: [5, -5, 5] }}
+              transition={{
+                repeat: Infinity,
+                repeatType: "mirror",
+                duration: 1,
+              }}
+            />
+            {/* <Image
               src={WOMEN_DANCE.src}
               width={1280}
               height={1280}
               alt="FOREGROUND"
               className="h-[400px] w-auto object-contain women-dance"
               draggable={false}
-            />
+            /> */}
           </div>
         </Box>
         {/* <div className="absolute bottom-0 right-[20%]">

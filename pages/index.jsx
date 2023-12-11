@@ -175,10 +175,18 @@ export default function Home() {
           {
             title == 3 && <>
               <button
-                onClick={() => router.push('/physical-activity/community/#home')}
-
+                onClick={() =>
+                  router.push("/physical-activity/community/#home")
+                }
               >
-                <Image src={PIN_COMMUNITY.src} width={512} height={512} alt='logo' className='h-24 w-auto object-contain absolute top-[55%] left-[20%] animate-bounce ' draggable={false} />
+                <Image
+                  src={PIN_COMMUNITY.src}
+                  width={512}
+                  height={512}
+                  alt="logo"
+                  className="h-24 w-auto object-contain absolute top-[55%] left-[20%] animate-bounce "
+                  draggable={false}
+                />
               </button>
             </>
           } */}
