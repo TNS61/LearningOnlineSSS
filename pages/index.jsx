@@ -26,6 +26,7 @@ import { Box, Button } from "@mui/material";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
+import ReactPlayer from "react-player";
 
 export default function Home() {
   const router = useRouter();
@@ -84,22 +85,31 @@ export default function Home() {
           position: "relative",
         }}
       >
-        <Image
+        {/* <Image
           src={LOGO.src}
           width={512}
           height={512}
           alt="logo"
           draggable={false}
           className="w-[20%] h-auto object-contain absolute top-[20%]  lg:top-[12%] left-[50%] translate-x-[-50%]"
-        />
-        <Image
+        /> */}
+        {/* <Image
           src={BG_HOME.src}
           width={512}
           height={512}
           alt="logo"
           className="h-[400px] w-auto  lg:h-auto lg:w-full  object-cover"
           draggable={false}
-        />
+        /> */}
+        <video
+          playsInline
+          muted
+          autoPlay
+          loop
+          className="w-full h-full object-cover z-50"
+        >
+          <source src="/Home_01.mp4" type="video/mp4" />
+        </video>
       </Box>
       <Box
         sx={{

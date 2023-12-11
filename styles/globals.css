@@ -126,7 +126,6 @@ body {
   position: relative;
 }
 
-
 .layer1,
 .layer2,
 .layer3 {
@@ -152,17 +151,15 @@ body {
 
 .title {
   /* height: 100vh; */
- position: absolute;
- top: 30%;
- z-index: 99;
- left: 50%;
- transform: translateX(-50%);
- display: flex;
- align-items: center;
+  position: absolute;
+  top: 30%;
+  z-index: 99;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
   justify-content: center;
 }
-
-
 
 .about {
   color: var(--secondaryColor);
@@ -180,22 +177,17 @@ body {
   width: 50%;
 }
 
-
 /* animation arm */
-.arm-left{
-
+.arm-left {
   animation: arm-left 0.75s ease-in-out infinite alternate;
-
-
 }
 
-.arm-right{
-
+.arm-right {
   animation: arm-right 0.75s ease-in-out infinite alternate;
 }
 
-.title-header{
-animation: title-header 0.75s ease-in-out infinite alternate;
+.title-header {
+  animation: title-header 0.75s ease-in-out infinite alternate;
 }
 
 @keyframes arm-left {
@@ -225,13 +217,11 @@ animation: title-header 0.75s ease-in-out infinite alternate;
   }
 }
 
-
-.men-dance{
+.men-dance {
   animation: men-dance 0.75s ease-in-out infinite alternate;
-
 }
 
-.women-dance{
+.women-dance {
   animation: men-dance 0.75s ease-in-out infinite alternate;
 }
 
@@ -241,5 +231,14 @@ animation: title-header 0.75s ease-in-out infinite alternate;
   }
   100% {
     transform: scale(1.1);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate3D(0, 0, 0);
+  }
+  100% {
+    transform: translate3D(-200vw, 0, 0);
   }
 }
