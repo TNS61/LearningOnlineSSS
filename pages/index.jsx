@@ -144,28 +144,31 @@ export default function Home() {
 
         <Box className="pt-5">
           <Box
-          sx={{
-            position: 'relative',
-          }}
+            sx={{
+              position: "relative",
+            }}
           >
             <CommunityScene />
-            <IconButton
-            sx={{
-              position: 'absolute',
-              bottom: '10px',
-              right: '10px',
-              zIndex: '1000',
-              p: '5 !important',
-              backgroundColor: '#fff !important',
-            }}
-            className="duration-500"
+            {/* <IconButton
+              sx={{
+                position: "absolute",
+                bottom: "10px",
+                right: "10px",
+                zIndex: "1000",
+                p: "5 !important",
+                backgroundColor: "#fff !important",
+              }}
+              className="duration-500"
             >
               {mode == "2d" ? (
                 <PanoramaIcon onClick={() => setMode("3d")} fontSize="large" />
               ) : (
-                <ThreeDRotationIcon onClick={() => setMode("2d")} fontSize="large"/>
+                <ThreeDRotationIcon
+                  onClick={() => setMode("2d")}
+                  fontSize="large"
+                />
               )}
-            </IconButton>
+            </IconButton> */}
           </Box>
 
           {/* <Image src={BG_MAP.src} width={512} height={512} alt='logo' className={`h-auto w-full object-cover ${title == 3 ? 'grayscale-0' : 'grayscale'} duration-500`} draggable={false} />

@@ -242,12 +242,12 @@ const Controls = ({ zoomCamera }) => {
   const { camera } = useThree();
   const controlsRef = useRef();
 
-  const animate = () => {
-    controlsRef.current.update();
-    requestAnimationFrame(animate);
-  };
-
   return (
-    <MapControls ref={controlsRef} enableZoom={false} enableRotate={false} />
+    <MapControls
+      ref={controlsRef}
+      enableZoom={false}
+      enableRotate={false}
+      // enablePan={false}
+    />
   );
 };
