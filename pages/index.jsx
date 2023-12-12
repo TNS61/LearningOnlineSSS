@@ -15,7 +15,6 @@ import {
   BTN_7_EN,
   BTN_8,
   BTN_8_EN,
-
 } from "@/assets";
 import Bar from "@/components/Bar";
 import CommunityScene from "@/components/CommunityScene";
@@ -100,14 +99,17 @@ export default function Home() {
           className="h-[400px] w-auto  lg:h-auto lg:w-full  object-cover"
           draggable={false}
         /> */}
-               <video
+        <video
           playsInline
           muted
           autoPlay
           loop
           className="w-full h-full object-cover z-50"
         >
-          <source src="https://www.gforcesolution.com/app/2023/LearningOnlineSSS/Home_01.mp4" type="video/mp4" />
+          <source
+            src="https://www.gforcesolution.com/app/2023/LearningOnlineSSS/Home_01.mp4"
+            type="video/mp4"
+          />
         </video>
       </Box>
       <Box

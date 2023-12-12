@@ -23,7 +23,7 @@ import {
 } from "@react-three/drei";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { useRouter } from "next/router";
-import React, { use, useMemo } from "react";
+import React, { use, useCallback, useMemo } from "react";
 import { useRef } from "react";
 import { useEffect } from "react";
 import { useState } from "react";
@@ -239,15 +239,59 @@ const Town = () => {
 // };
 
 const Controls = ({ zoomCamera }) => {
-  const { camera } = useThree();
   const controlsRef = useRef();
+  const { camera, size } = useThree();
 
+  // const limitPanningDistance = useCallback(
+  //   (e) => {
+  //     // 704.5 102
+  //     // 1056.75 320
+
+  //     // Returns the drag container width and height
+  //     const [w, h] = [1920, 1080];
+
+  //     const pan = (w * camera.zoom - size.width) / 2 / camera.zoom;
+  //     const vertical = (h * camera.zoom - size.height) / 2 / camera.zoom;
+
+  //     // console.log('pan vertical', pan, vertical);
+
+  //     const maxX = 10;
+  //     const minX = -10;
+  //     const maxY = 10;
+  //     const minY = -10;
+  //     const x = e?.target.target.x;
+  //     const y = e?.target.target.y;
+
+
+  //     console.log("x", x, "y", y, "minX", minX, "maxX", maxX, "minY", minY, "maxY", maxY);
+
+  //     if (x < minX || x > maxX) {
+  //       e?.target.target.setX(x < minX ? minX : maxX);
+  //       camera.position.setX(x < minX ? minX : maxX);
+  //     }
+  //     if (y < minY || y > maxY) {
+  //       e?.target.target.setY(y < minY ? minY : maxY);
+  //       camera.position.setY(y < minY ? minY : maxY);
+  //     }
+  //   },
+  //   [camera.zoom, size]
+  // );
   return (
     <MapControls
       ref={controlsRef}
       enableZoom={false}
       enableRotate={false}
+
       // enablePan={false}
     />
+    // <MapControls
+    //   enableRotate={false}
+    //   enableZoom={false}
+    //   onChange={(e) => {
+    //     // console.log(e?.target);
+    //     limitPanningDistance(e);
+    //   }}
+    //   makeDefault
+    // />
   );
 };
