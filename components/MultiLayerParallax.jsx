@@ -20,7 +20,7 @@ export default function MultiLayerParallax() {
         style={{ y: textY }}
         className="font-bold text-white text-2xl md:text-5xl relative z-10"
       >
-       ชุมชนเข้มแข็ง คนไทยแข็งแรง
+        ชุมชนเข้มแข็ง คนไทยแข็งแรง
       </motion.h1>
 
       <motion.div

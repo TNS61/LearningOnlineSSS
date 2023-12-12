@@ -82,9 +82,21 @@ import LAYER3 from "./images/community/layer3.png";
 import FOREGROUND from "./images/community/foreground01.png";
 import ARM_LEFT from "./images/community/arm_left.png";
 import ARM_RIGHT from "./images/community/arm_right.png";
-import MEN_DANCE from "./images/community/men_dance.png"
-import WOMEN_DANCE from "./images/community/women_dance.png"
+import MEN_DANCE from "./images/community/men_dance.png";
+import WOMEN_DANCE from "./images/community/women_dance.png";
 
+import TREE_FOREGROUND from "./images/community/tree_foreground.png";
+import LAYER2_LEFT from "./images/community/layer2_Left.png";
+import LAYER2_MID from "./images/community/layer2_Mid.png";
+import LAYER2_RIGHT from "./images/community/layer2_Right.png";
+
+import LAYER3_LEFT from "./images/community/layer3_Left.png";
+import LAYER3_RIGHT from "./images/community/layer3_Right.png";
+
+import EXCERCISE from "./images/community/Exercise.png";
+import CHECK_UP from "./images/community/Checkup.png";
+import REST from "./images/community/Rest.png";
+import TENSE from "./images/community/Tense.png";
 
 export {
   BG_COMMUNITY,
@@ -103,5 +115,15 @@ export {
   ARM_LEFT,
   ARM_RIGHT,
   MEN_DANCE,
-  WOMEN_DANCE
+  WOMEN_DANCE,
+  TREE_FOREGROUND,
+  LAYER2_LEFT,
+  LAYER2_MID,
+  LAYER2_RIGHT,
+  LAYER3_LEFT,
+  LAYER3_RIGHT,
+  EXCERCISE,
+  CHECK_UP,
+  REST,
+  TENSE,
 };
