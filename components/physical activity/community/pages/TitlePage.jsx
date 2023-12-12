@@ -9,7 +9,7 @@ import {
   TITLE,
   TREE_FOREGROUND_LEFT,
   TREE_FOREGROUND_RIGHT,
-} from "@/assets";
+} from "../../../../assets";
 import { Box } from "@mui/material";
 import Image from "next/image";
 import React, { useCallback, useEffect } from "react";
