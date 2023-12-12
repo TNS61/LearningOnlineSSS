@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, Button } from "@mui/material";
 import {
   ArcballControls,
   CameraControls,
@@ -9,6 +9,7 @@ import {
   FirstPersonControls,
   FlyControls,
   Html,
+  Image,
   KeyboardControls,
   MapControls,
   MotionPathControls,
@@ -16,6 +17,7 @@ import {
   PerspectiveCamera,
   PointerLockControls,
   Sky,
+  SpriteAnimator,
   TrackballControls,
   TransformControls,
   useGLTF,
@@ -32,8 +34,9 @@ import * as THREE from "three";
 
 export default function CommunityScene() {
   const [positionCamera, setPositionCamera] = useState([50, 50, 50]);
-  const [targetCamera, setTargetCamera] = useState([0, 0, 0]);
+
   const [zoomCamera, setZoomCamera] = useState(1);
+  const [cameraMode, setCameraMode] = useState("top");
 
   const onWhellZoomCamera = (e) => {
     setZoomCamera((prev) => {
@@ -48,9 +51,26 @@ export default function CommunityScene() {
     });
   };
 
+  const handleChangeCameraMode = () => {
+    if (cameraMode == "top") {
+      setCameraMode("free");
+      setPositionCamera([0, 50, 0]);
+    } else {
+      setCameraMode("top");
+      setPositionCamera([50, 50, 50]);
+    }
+  };
+
   const onTouchZoomCamera = (e) => {
     console.log(e.touches[0].clientX, e.touches[0].clientY);
   };
+
+  // const textureUrls = [
+  //   "http://192.168.1.138:3003/images/g1.png",
+  //   "http://192.168.1.138:3003/images/g.png",
+  // ];
+  const frameCount = 3;
+  const frameRate = 30;
 
   return (
     <Box
@@ -59,6 +79,13 @@ export default function CommunityScene() {
         width: "100% !important",
       }}
     >
+      {/* <Button
+        onClick={() => {
+          handleChangeCameraMode();
+        }}
+      >
+        เปลี่ยนมุมมอง
+      </Button> */}
       <Canvas
         camera={{
           fov: 40,
@@ -75,6 +102,7 @@ export default function CommunityScene() {
         }}
       >
         <fog attach="fog" args={["#ffffff", 50, 250]} />
+        {/* <Cloud concentrate="random" growth={10} color="#ffffff" opacity={1.25} seed={0.3} bounds={100} volume={10} position={[0, 10, 0]} /> */}
         {/* <Sky sunPosition={[100, 20, 100]} /> */}
         <ambientLight intensity={1.25} />
         <ButtonCommunity
@@ -82,7 +110,7 @@ export default function CommunityScene() {
           rotation={[0, -2.4, 0]}
           scale={10}
           onClick={"/physical-activity/community"}
-          src={"https://www.gforcesolution.com/app/2023/LearningOnlineSSS/model/button_town.glb"}
+          src={"http://192.168.1.138:3003/model/button_town.glb"}
           positionY={5}
           timeStart={2}
         />
@@ -91,7 +119,7 @@ export default function CommunityScene() {
           rotation={[0, -1.8, 0]}
           scale={10}
           onClick={"/physical-activity/community"}
-          src={"https://www.gforcesolution.com/app/2023/LearningOnlineSSS/model/button_School.glb"}
+          src={"http://192.168.1.138:3003/model/button_School.glb"}
           positionY={10}
           timeStart={0}
         />
@@ -100,12 +128,20 @@ export default function CommunityScene() {
           rotation={[0, -3, 0]}
           scale={10}
           onClick={"/physical-activity/community"}
-          src={"https://www.gforcesolution.com/app/2023/LearningOnlineSSS/model/button_Origanize.glb"}
+          src={"http://192.168.1.138:3003/model/button_Origanize.glb"}
           positionY={15}
           timeStart={1}
         />
         <Town />
-        <Controls zoomCamera={zoomCamera} />
+        <group rotation={[0, 0, 0]}>
+          {/* <AnimationModel/> */}
+          {/* <SpriteAnim
+            textureUrls={"http://192.168.1.138:3003/images/JUMP.png"}
+            anim={"http://192.168.1.138:3003/animation/JUMP.json"}
+          /> */}
+        </group>
+        {/* <Npc src={"http://192.168.1.138:3003/images/bicycle.png"} /> */}
+        <Controls zoomCamera={zoomCamera} positionCamera={positionCamera} />
         {/* <Environment preset="sunset" background /> */}
       </Canvas>
     </Box>
@@ -152,7 +188,7 @@ const ButtonCommunity = ({
 };
 
 const Town = () => {
-  const townSrc = "https://www.gforcesolution.com/app/2023/LearningOnlineSSS/model/REF_PLANE.glb";
+  const townSrc = "http://192.168.1.138:3003/model/REF_PLANE.glb";
   const { scene } = useGLTF(townSrc);
 
   return (
@@ -238,60 +274,160 @@ const Town = () => {
 //   );
 // };
 
-const Controls = ({ zoomCamera }) => {
+const Controls = ({ zoomCamera, positionCamera }) => {
   const controlsRef = useRef();
   const { camera, size } = useThree();
+  const cameraLastPosition = useRef({
+    x: camera.position.x,
+    y: camera.position.y,
+  });
 
-  // const limitPanningDistance = useCallback(
-  //   (e) => {
-  //     // 704.5 102
-  //     // 1056.75 320
+  const limitPanningDistance = useCallback(
+    (e) => {
+      const maxX = 43;
+      const minX = -70;
 
-  //     // Returns the drag container width and height
-  //     const [w, h] = [1920, 1080];
+      const maxZ = 15;
+      const minZ = -15;
 
-  //     const pan = (w * camera.zoom - size.width) / 2 / camera.zoom;
-  //     const vertical = (h * camera.zoom - size.height) / 2 / camera.zoom;
+      const x = e?.target.target.x;
+      const y = e?.target.target.y;
+      const z = e?.target.target.z;
 
-  //     // console.log('pan vertical', pan, vertical);
+      if (x < minX || x > maxX) {
+        console.log(x);
+        e?.target.target.setX(x < minX ? minX : maxX);
+        camera.position.setX(cameraLastPosition.current.x);
+      }
 
-  //     const maxX = 10;
-  //     const minX = -10;
-  //     const maxY = 10;
-  //     const minY = -10;
-  //     const x = e?.target.target.x;
-  //     const y = e?.target.target.y;
+      if (z < -40 || z > 10) {
+        console.log(z);
+        e?.target.target.setZ(z < -40 ? -40 : 10);
+        camera.position.setZ(cameraLastPosition.current.z);
+      }
 
+      cameraLastPosition.current.x = camera.position.x;
+      cameraLastPosition.current.y = camera.position.y;
+      cameraLastPosition.current.z = camera.position.z;
+    },
+    [camera.zoom, size]
+  );
 
-  //     console.log("x", x, "y", y, "minX", minX, "maxX", maxX, "minY", minY, "maxY", maxY);
+  useEffect(() => {}, [zoomCamera]);
 
-  //     if (x < minX || x > maxX) {
-  //       e?.target.target.setX(x < minX ? minX : maxX);
-  //       camera.position.setX(x < minX ? minX : maxX);
-  //     }
-  //     if (y < minY || y > maxY) {
-  //       e?.target.target.setY(y < minY ? minY : maxY);
-  //       camera.position.setY(y < minY ? minY : maxY);
-  //     }
-  //   },
-  //   [camera.zoom, size]
-  // );
+  useEffect(() => {
+    camera.position.set(
+      positionCamera[0],
+      positionCamera[1],
+      positionCamera[2]
+    );
+    camera.lookAt(
+      cameraLastPosition.current.x,
+      cameraLastPosition.current.y,
+      cameraLastPosition.current.z
+    );
+  }, [positionCamera]);
+
+  useFrame(({ clock }) => {
+    //  const t = clock.getElapsedTime();
+    //   const x = Math.sin(t * 2 + 2) * 0.5 + 50;
+    //   const y = Math.sin(t * 2 + 2) * 0.5 + 50;
+    //   const z = Math.sin(t * 2 + 2) * 0.5 + 50;
+    //   camera.position.set(x, y, z);
+  });
+
   return (
-    <MapControls
-      ref={controlsRef}
-      enableZoom={false}
-      enableRotate={false}
-
-      // enablePan={false}
-    />
     // <MapControls
-    //   enableRotate={false}
+    //   ref={controlsRef}
     //   enableZoom={false}
-    //   onChange={(e) => {
-    //     // console.log(e?.target);
-    //     limitPanningDistance(e);
-    //   }}
-    //   makeDefault
+    //   enableRotate={false}
+
+    //   // enablePan={false}
     // />
+    <MapControls
+      enableRotate={false}
+      enableZoom={false}
+      onChange={(e) => {
+        // console.log(e?.target);
+        limitPanningDistance(e);
+      }}
+      makeDefault
+    />
   );
 };
+
+// const SpriteAnim = ({ textureUrls, frameCount, frameRate }) => {
+//   const spriteRef = useRef();
+//   const textureArray = useMemo(() => {
+//     console.log(textureUrls);
+//     return textureUrls.map((url) => new THREE.TextureLoader().load(url));
+//   }, [textureUrls]);
+
+//   const currentFrame = useRef(0);
+//   const frameTime = 1 / frameRate;
+
+//   useFrame(() => {
+//     currentFrame.current += frameTime;
+//     const currentFrameIndex = Math.floor(currentFrame.current) % frameCount;
+//     spriteRef.current.material.map = textureArray[currentFrameIndex];
+//     spriteRef.current.position.x = Math.sin(currentFrame.current) * 3;
+//     spriteRef.current.rotation.x = Math.sin(currentFrame.current) * 0.5;
+//   });
+
+//   return (
+//     <sprite ref={spriteRef} position={[0, 2.5, 25]} scale={[5, 5, 5]}>
+//       <spriteMaterial map={textureArray[0]} />
+//     </sprite>
+//   );
+// };
+
+const SpriteAnim = ({ textureUrls, anim }) => {
+  const animRef = useRef();
+
+  useFrame(({ clock }) => {
+    const time = clock.getElapsedTime();
+    animRef.current.position.x = Math.sin(time) * 10;
+  });
+
+  return (
+    <group ref={animRef}>
+      <SpriteAnimator
+        scale={[5, 5, 5]}
+        position={[0, 2.5, 25]}
+        // onLoopEnd={onEnd}
+        // frameName={"celebration"}
+        fps={5}
+        // animationNames={['celebration']}
+        autoPlay={true}
+        loop={true}
+        alphaTest={0.01}
+        textureImageURL={textureUrls}
+        textureDataURL={anim}
+      />
+    </group>
+  );
+};
+
+const AnimationModel = () => {
+  const modelSrc = "http://192.168.1.138:3003/model/character_town.glb";
+  const { scene ,animations} = useGLTF(modelSrc);
+
+  const [mixer] = useState(() => new THREE.AnimationMixer(scene));
+
+  useEffect(() => {
+    const action = mixer.clipAction(animations[0]);
+    action.play();
+  }
+  , [mixer]);
+
+  useFrame((state, delta) => {
+    mixer.update(delta);
+  }
+  );
+
+  return (
+    <group>
+      <primitive object={scene} />
+    </group>
+  );
+}
