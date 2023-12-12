@@ -66,8 +66,8 @@ export default function CommunityScene() {
   };
 
   // const textureUrls = [
-  //   "http://192.168.1.138:3003/images/g1.png",
-  //   "http://192.168.1.138:3003/images/g.png",
+  //   "https://www.gforcesolution.com/app/2023/LearningOnlineSSS/images/g1.png",
+  //   "https://www.gforcesolution.com/app/2023/LearningOnlineSSS/images/g.png",
   // ];
   const frameCount = 3;
   const frameRate = 30;
@@ -110,7 +110,7 @@ export default function CommunityScene() {
           rotation={[0, -2.4, 0]}
           scale={10}
           onClick={"/physical-activity/community"}
-          src={"http://192.168.1.138:3003/model/button_town.glb"}
+          src={"https://www.gforcesolution.com/app/2023/LearningOnlineSSS/model/button_town.glb"}
           positionY={5}
           timeStart={2}
         />
@@ -119,7 +119,7 @@ export default function CommunityScene() {
           rotation={[0, -1.8, 0]}
           scale={10}
           onClick={"/physical-activity/community"}
-          src={"http://192.168.1.138:3003/model/button_School.glb"}
+          src={"https://www.gforcesolution.com/app/2023/LearningOnlineSSS/model/button_School.glb"}
           positionY={10}
           timeStart={0}
         />
@@ -128,7 +128,7 @@ export default function CommunityScene() {
           rotation={[0, -3, 0]}
           scale={10}
           onClick={"/physical-activity/community"}
-          src={"http://192.168.1.138:3003/model/button_Origanize.glb"}
+          src={"https://www.gforcesolution.com/app/2023/LearningOnlineSSS/model/button_Origanize.glb"}
           positionY={15}
           timeStart={1}
         />
@@ -136,11 +136,11 @@ export default function CommunityScene() {
         <group rotation={[0, 0, 0]}>
           {/* <AnimationModel/> */}
           {/* <SpriteAnim
-            textureUrls={"http://192.168.1.138:3003/images/JUMP.png"}
-            anim={"http://192.168.1.138:3003/animation/JUMP.json"}
+            textureUrls={"https://www.gforcesolution.com/app/2023/LearningOnlineSSS/images/JUMP.png"}
+            anim={"https://www.gforcesolution.com/app/2023/LearningOnlineSSS/animation/JUMP.json"}
           /> */}
         </group>
-        {/* <Npc src={"http://192.168.1.138:3003/images/bicycle.png"} /> */}
+        {/* <Npc src={"https://www.gforcesolution.com/app/2023/LearningOnlineSSS/images/bicycle.png"} /> */}
         <Controls zoomCamera={zoomCamera} positionCamera={positionCamera} />
         {/* <Environment preset="sunset" background /> */}
       </Canvas>
@@ -188,7 +188,7 @@ const ButtonCommunity = ({
 };
 
 const Town = () => {
-  const townSrc = "http://192.168.1.138:3003/model/REF_PLANE.glb";
+  const townSrc = "https://www.gforcesolution.com/app/2023/LearningOnlineSSS/model/REF_PLANE.glb";
   const { scene } = useGLTF(townSrc);
 
   return (
@@ -409,7 +409,7 @@ const SpriteAnim = ({ textureUrls, anim }) => {
 };
 
 const AnimationModel = () => {
-  const modelSrc = "http://192.168.1.138:3003/model/character_town.glb";
+  const modelSrc = "https://www.gforcesolution.com/app/2023/LearningOnlineSSS/model/character_town.glb";
   const { scene ,animations} = useGLTF(modelSrc);
 
   const [mixer] = useState(() => new THREE.AnimationMixer(scene));
