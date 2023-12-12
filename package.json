@@ -34,6 +34,7 @@
     "react-scroll-motion": "^0.3.2",
     "react-scroll-parallax": "^3.4.5",
     "rolly.js": "^0.4.0",
+    "sass": "^1.69.5",
     "three": "^0.159.0"
   },
   "devDependencies": {

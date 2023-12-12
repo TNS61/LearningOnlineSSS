@@ -1,32 +1,29 @@
-import MenuIcon from "@mui/icons-material/Menu";
-import { Box, IconButton, Menu, MenuItem } from "@mui/material";
-import "animate.css/animate.min.css";
+import { FC, useEffect, useRef, useState } from "react";
 import AOS from "aos";
-import "aos/dist/aos.css";
+import { Box, IconButton, Menu, MenuItem } from "@mui/material";
 import { useRouter } from "next/router";
-import React, { useEffect, useState } from "react";
-import TitlePage from "../../../components/physical activity/community/pages/TitlePage";
-import DescriptionPage from "../../../components/physical activity/community/pages/DescriptionPage";
-import SituationPage from "../../../components/physical activity/community/pages/SituationPage";
-
+import MenuIcon from "@mui/icons-material/Menu";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
-import Plx from "react-plx";
-import Image from "next/image";
-import { TREE_FOREGROUND } from "../../../assets";
-import TreeForeground from "../../../components/physical activity/community/TreeForeground";
+import TitlePage from "../../../components/physical activity/community/pages/TitlePage";
+import { useScroll } from "@react-three/drei";
+interface CommunityProps {}
 
-export default function Community() {
+const Community: FC<CommunityProps> = ({}) => {
+  const target = useRef(null!);
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
     });
   }, []);
-
   return (
     <Box
-      sx={{
-        backgroundColor: "#FFF2C6 !important",
-      }}
+      ref={target}
+      sx={
+        {
+          // backgroundColor: "#FFF2C6 !important",
+        }
+      }
     >
       {/* menu bar */}
       <Box
@@ -43,133 +40,32 @@ export default function Community() {
         <MenuBar />
       </Box>
 
-      <Parallax pages={5}>
-        {/* <ParallaxLayer offset={0} sticky={{start :0 , end:1}}>
-      <TreeForeground />
-
-        </ParallaxLayer> */}
-        <ParallaxLayer sticky={{ start: 0, end: 2 }}>
-          <Box
-            id="home"
-            sx={{
-              height: "100dvh",
-              backgroundColor: "#FFF2C6 !important",
-              position: "relative",
-            }}
+      <Parallax pages={5} className="bg-[#FFF2C6]">
+        <ParallaxLayer sticky={{ start: 0, end: 2 }} factor={1} style={{}}>
+          {/* <animated.div
+            style={{ opacity: scrollY }}
+            className="w-full h-full text-center text-xl font-bold"
           >
-            <TitlePage />
-          </Box>
+            <TreeForegroundNew />
+          </animated.div> */}
+          {/* <Opening /> */}
         </ParallaxLayer>
 
-        <ParallaxLayer offset={2}>
-          <Box
-            id="description"
-            // className="pt-20 flex flex-col  items-center gap-10"
-          >
-            <DescriptionPage />
-          </Box>
-        </ParallaxLayer>
-
-        {/* สถานการณ์ */}
-
-        <ParallaxLayer offset={3}>
-          <Box
-            // sx={{
-            //   height: "110dvh",
-            //   backgroundColor: "#FFF2C6 !important",
-            //   pt: "10rem",
-            // }}
-            id="situation"
-          >
-            {/* <div data-aos="fade-up">
-          <Typography
-            sx={{
-              fontSize: "4rem",
-              textAlign: "center",
-              fontWeight: "bold",
-              // color: "#fff !important",
-            }}
-          >
-            สถานการณ์
-          </Typography>
-        </div> */}
-            <SituationPage />
-          </Box>
+        <ParallaxLayer sticky={{ start: 0, end: 2 }} factor={2}>
+          <TitlePage />
         </ParallaxLayer>
       </Parallax>
-
-      {/* กระบวนการดำเนินงาน */}
-      {/* <Box
-        sx={{
-          height: "110dvh",
-          backgroundColor: "#FFF2C6 !important",
-          pt: "10rem",
-        }}
-        id="process"
-      >
-        <Typography
-          sx={{
-            fontSize: "4rem",
-            textAlign: "center",
-            fontWeight: "bold",
-            // color: "#fff !important",
-          }}
-        >
-          กระบวนการดำเนินงาน
-        </Typography>
-      </Box> */}
-
-      {/* เครื่องมือเสริมการทำงาน */}
-      {/* <Box
-        sx={{
-          height: "110dvh",
-          backgroundColor: "#FFF2C6 !important",
-          pt: "10rem",
-        }}
-        id="tool"
-      >
-        <Typography
-          sx={{
-            fontSize: "4rem",
-            textAlign: "center",
-            fontWeight: "bold",
-            // color: "#fff !important",
-          }}
-        >
-          เครื่องมือเสริมการทำงาน
-        </Typography>
-      </Box> */}
-
-      {/* กรณีศึกษา */}
-      {/* <Box
-        sx={{
-          height: "110dvh",
-          backgroundColor: "#FFF2C6 !important",
-          pt: "10rem",
-        }}
-        id="case"
-      >
-        <Typography
-          sx={{
-            fontSize: "4rem",
-            textAlign: "center",
-            fontWeight: "bold",
-            // color: "#fff !important",
-          }}
-        >
-          กรณีศึกษา
-        </Typography>
-      </Box> */}
-      {/* อื่นๆ ที่เกี่ยวข้อง */}
     </Box>
   );
-}
+};
+
+export default Community;
 
 const MenuBar = () => {
   const router = useRouter();
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
-  const handleClick = (event) => {
+  const handleClick = (event: any) => {
     setAnchorEl(event.currentTarget);
   };
   const handleClose = () => {
