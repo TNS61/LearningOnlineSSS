@@ -47,7 +47,7 @@ const SituationPage: FC<SituationPageProps> = ({}) => {
         overflow: "visible !important",
       }}
     >
-      <Box className="flex justify-start items-start translate-y-[-150%]">
+      <Box className="flex justify-start items-start translate-y-[-140%]">
         <Box className="relative w-fit">
           <Typography
             data-aos="fade-up"
@@ -83,7 +83,7 @@ const SituationPage: FC<SituationPageProps> = ({}) => {
         <div
           data-aos="fade-up-right"
           data-aos-duration="2000"
-          className="absolute top-0 left-0 rounded-full bg-[#20C382] w-[30rem] h-[30rem] z-10 text-center grid grid-rows-3 justify-center items-center p-3 translate-x-[50%] hover:scale-[1.02] cursor-pointer"
+          className="absolute top-0 left-0 rounded-full bg-[#20C382] w-[25rem] h-[25rem] z-10 text-center grid grid-rows-3 justify-center items-center p-3 translate-x-[70%] hover:scale-[1.02] cursor-pointer"
         >
           <motion.img
             src={CHECK_UP.src}
@@ -107,7 +107,7 @@ const SituationPage: FC<SituationPageProps> = ({}) => {
               sx={{
                 textAlign: "center",
                 color: "#343434",
-                fontSize: "2.5rem",
+                fontSize: "2.2rem",
                 fontWeight: "bold",
               }}
             >
@@ -117,7 +117,7 @@ const SituationPage: FC<SituationPageProps> = ({}) => {
               sx={{
                 textAlign: "center",
                 color: "#FFFFFF",
-                fontSize: "2.5rem",
+                fontSize: "2rem",
                 fontWeight: "",
               }}
             >
@@ -127,7 +127,7 @@ const SituationPage: FC<SituationPageProps> = ({}) => {
               sx={{
                 textAlign: "center",
                 color: "#FFFFFF",
-                fontSize: "1.6rem",
+                fontSize: "1.5rem",
                 fontWeight: "",
               }}
             >
@@ -139,14 +139,14 @@ const SituationPage: FC<SituationPageProps> = ({}) => {
         <div
           data-aos="fade-up-left"
           data-aos-duration="1500"
-          className="absolute top-0 right-0 rounded-full bg-[#20C382] w-[30rem] h-[30rem] z-10 text-center grid grid-rows-3 justify-center items-center p-3 translate-x-[-50%] overflow-visible hover:scale-[1.02] cursor-pointer"
+          className="absolute top-0 right-0 rounded-full bg-[#20C382] w-[25rem] h-[25rem] z-10 text-center grid grid-rows-3 justify-center items-center p-3 translate-x-[-70%] overflow-visible hover:scale-[1.02] cursor-pointer"
         >
           <motion.img
             src={REST.src}
             width={512}
             height={512}
             alt="title"
-            className="w-[200px] z-[999]  relative bg-cover object-cover top-[-20%] place-self-center overflow-visible"
+            className="w-[200px] z-[999]  relative bg-cover object-cover top-[-50%] place-self-center overflow-visible"
             draggable={false}
             whileHover={{ scale: 1.1 }}
             animate={{ x: [4, -4, 0], y: [0, 0, -8], rotate: [0, 5, 0] }}
@@ -163,7 +163,7 @@ const SituationPage: FC<SituationPageProps> = ({}) => {
               sx={{
                 textAlign: "center",
                 color: "#343434",
-                fontSize: "2.5rem",
+                fontSize: "2.2rem",
                 fontWeight: "bold",
               }}
             >
@@ -173,7 +173,7 @@ const SituationPage: FC<SituationPageProps> = ({}) => {
               sx={{
                 textAlign: "center",
                 color: "#FFFFFF",
-                fontSize: "2.5rem",
+                fontSize: "2rem",
                 fontWeight: "",
               }}
             >
@@ -183,7 +183,7 @@ const SituationPage: FC<SituationPageProps> = ({}) => {
               sx={{
                 textAlign: "center",
                 color: "#FFFFFF",
-                fontSize: "1.6rem",
+                fontSize: "1.5rem",
                 fontWeight: "",
               }}
             >
@@ -195,14 +195,14 @@ const SituationPage: FC<SituationPageProps> = ({}) => {
         <div
           data-aos="fade-down"
           data-aos-duration="5000"
-          className="absolute bottom-0 left-0 rounded-full bg-[#20C382] w-[30rem] h-[30rem] z-10 text-center grid grid-rows-3 justify-center items-center p-3 translate-x-[-35%] hover:scale-[1.02] cursor-pointer"
+          className="absolute bottom-0 left-0 rounded-full bg-[#20C382] w-[25rem] h-[25rem] z-10 text-center grid grid-rows-3 justify-center items-center p-3 translate-x-[-15%] hover:scale-[1.02] cursor-pointer"
         >
           <motion.img
             src={EXCERCISE.src}
             width={512}
             height={512}
             alt="title"
-            className="w-[250px] z-[999]  relative bg-cover object-cover top-[-20%] place-self-center overflow-visible"
+            className="w-[250px] z-[999] relative bg-cover object-cover top-[-30%] place-self-center overflow-visible"
             draggable={false}
             whileHover={{ scale: 1.1 }}
             animate={{ x: [0, 5, -25], rotate: [0, 0, 0] }}
@@ -219,7 +219,7 @@ const SituationPage: FC<SituationPageProps> = ({}) => {
               sx={{
                 textAlign: "center",
                 color: "#343434",
-                fontSize: "2.5rem",
+                fontSize: "2.2rem",
                 fontWeight: "bold",
               }}
             >
@@ -229,7 +229,7 @@ const SituationPage: FC<SituationPageProps> = ({}) => {
               sx={{
                 textAlign: "center",
                 color: "#FFFFFF",
-                fontSize: "2.5rem",
+                fontSize: "2rem",
                 fontWeight: "",
               }}
             >
@@ -239,7 +239,7 @@ const SituationPage: FC<SituationPageProps> = ({}) => {
               sx={{
                 textAlign: "center",
                 color: "#FFFFFF",
-                fontSize: "1.6rem",
+                fontSize: "1.5rem",
                 fontWeight: "",
               }}
             >
@@ -251,14 +251,14 @@ const SituationPage: FC<SituationPageProps> = ({}) => {
         <div
           data-aos="fade-left"
           data-aos-duration="1000"
-          className="absolute bottom-0 right-0 rounded-full bg-[#20C382] w-[30rem] h-[30rem] z-10 text-center grid grid-rows-3 justify-center items-center p-3  translate-x-[30%] hover:scale-[1.02] cursor-pointer"
+          className="absolute bottom-0 right-0 rounded-full bg-[#20C382] w-[25rem] h-[25rem] z-10 text-center grid grid-rows-3 justify-center items-center p-3  translate-x-[15%] hover:scale-[1.02] cursor-pointer"
         >
           <motion.img
             src={TENSE.src}
             width={512}
             height={512}
             alt="title"
-            className="w-[250px] z-[999]  relative bg-cover object-cover top-[-20%] place-self-center overflow-visible"
+            className="w-[250px] z-[999]  relative bg-cover object-cover top-[-30%] place-self-center overflow-visible"
             draggable={false}
             whileHover={{ scale: 1.1 }}
             animate={{ scale: [1, 1.1, 0.95] }}
@@ -275,7 +275,7 @@ const SituationPage: FC<SituationPageProps> = ({}) => {
               sx={{
                 textAlign: "center",
                 color: "#343434",
-                fontSize: "2.5rem",
+                fontSize: "2.2rem",
                 fontWeight: "bold",
               }}
             >
@@ -285,7 +285,7 @@ const SituationPage: FC<SituationPageProps> = ({}) => {
               sx={{
                 textAlign: "center",
                 color: "#FFFFFF",
-                fontSize: "2.5rem",
+                fontSize: "2rem",
                 fontWeight: "",
               }}
             >
@@ -295,7 +295,7 @@ const SituationPage: FC<SituationPageProps> = ({}) => {
               sx={{
                 textAlign: "center",
                 color: "#FFFFFF",
-                fontSize: "1.6rem",
+                fontSize: "1.5rem",
                 fontWeight: "",
               }}
             >

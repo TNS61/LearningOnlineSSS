@@ -20,7 +20,7 @@ import {
   LAYER2_RIGHT,
   TREE_FOREGROUND,
 } from "../../../../assets";
-import {motion} from "framer-motion"
+import { motion } from "framer-motion";
 
 export default function TitlePage() {
   const target = React.useRef(null);
@@ -266,7 +266,7 @@ export default function TitlePage() {
         className=""
       >
         <motion.img
-        onScroll={{}}
+          onScroll={{}}
           src={TREE_FOREGROUND.src}
           width={1280}
           height={1280}

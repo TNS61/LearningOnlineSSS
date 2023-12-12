@@ -122,14 +122,17 @@ export default function DescriptionPage() {
         >
           <div className="absolute bottom-10 right-[20%]">
             <motion.img
-              data-aos="zoom-in"
               src={MEN_DANCE.src}
               width={1280}
               height={1280}
               alt="FOREGROUND"
               className="h-[400px] w-auto object-contain"
               draggable={false}
-              animate={{ x: [10, -10, 0], y: [0, 0, -20], rotate: [0, 5, 0] }}
+              animate={{
+                x: [10, -5, 10],
+                y: [10, 0, -10],
+                rotate: [5, -5, 0],
+              }}
               transition={{
                 repeat: Infinity,
                 duration: 0.8,
