@@ -34,7 +34,7 @@ const SituationPage: FC<SituationPageProps> = ({}) => {
   return (
     <Box
       sx={{
-        height: "200dvh",
+        height: "160dvh",
         width: "100% !important",
         // backgroundColor: "#FFF2C6 !important",
         position: "relative",
