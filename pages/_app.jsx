@@ -1,5 +1,5 @@
 import { FAVICON, LOGO } from "@/assets";
-import "@/styles/globals.css";
+import "../styles/globals.css";
 import { CssBaseline, ThemeProvider, createTheme } from "@mui/material";
 import Head from "next/head";
 import { useRouter } from "next/router";
@@ -15,7 +15,7 @@ export default function App({ Component, pageProps }) {
   const { pathname } = useRouter();
 
   return (
-    <ParallaxProvider>
+    <ParallaxProvider scrollAxis="vertical">
       <ThemeProvider theme={theme}>
         <SEO pathname={pathname} />
         <CssBaseline />

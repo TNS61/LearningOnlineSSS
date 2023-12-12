@@ -89,6 +89,8 @@ import TREE_FOREGROUND from "./images/community/tree_foreground.png";
 import LAYER2_LEFT from "./images/community/layer2_Left.png";
 import LAYER2_MID from "./images/community/layer2_Mid.png";
 import LAYER2_RIGHT from "./images/community/layer2_Right.png";
+import TREE_FOREGROUND_LEFT from "./images/community/tree_foreground_left.png";
+import TREE_FOREGROUND_RIGHT from "./images/community/tree_foreground_right.png";
 
 import LAYER3_LEFT from "./images/community/layer3_Left.png";
 import LAYER3_RIGHT from "./images/community/layer3_Right.png";
@@ -126,4 +128,6 @@ export {
   CHECK_UP,
   REST,
   TENSE,
+  TREE_FOREGROUND_LEFT,
+  TREE_FOREGROUND_RIGHT,
 };

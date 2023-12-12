@@ -9,12 +9,6 @@ import TitlePage from "../../../components/physical activity/community/pages/Tit
 import DescriptionPage from "../../../components/physical activity/community/pages/DescriptionPage";
 import SituationPage from "../../../components/physical activity/community/pages/SituationPage";
 
-import { Parallax, ParallaxLayer } from "@react-spring/parallax";
-import Plx from "react-plx";
-import Image from "next/image";
-import { TREE_FOREGROUND } from "../../../assets";
-import TreeForeground from "../../../components/physical activity/community/TreeForeground";
-
 export default function Community() {
   useEffect(() => {
     AOS.init({
@@ -43,45 +37,38 @@ export default function Community() {
         <MenuBar />
       </Box>
 
-      <Parallax pages={5}>
-        {/* <ParallaxLayer offset={0} sticky={{start :0 , end:1}}>
-      <TreeForeground />
+      <Box
+        id="home"
+        sx={{
+          height: "150dvh",
+          backgroundColor: "#FFF2C6 !important",
+          position: "relative",
+        }}
+      >
+        <TitlePage />
+      </Box>
 
-        </ParallaxLayer> */}
-        <ParallaxLayer sticky={{ start: 0, end: 2 }}>
-          <Box
-            id="home"
-            sx={{
-              height: "100dvh",
-              backgroundColor: "#FFF2C6 !important",
-              position: "relative",
-            }}
-          >
-            <TitlePage />
-          </Box>
-        </ParallaxLayer>
+      <Box
+        id="description"
+        sx={{
+          height: "150dvh",
+        }}
+        // className="pt-20 flex flex-col  items-center gap-10"
+      >
+        <DescriptionPage />
+      </Box>
 
-        <ParallaxLayer offset={2}>
-          <Box
-            id="description"
-            // className="pt-20 flex flex-col  items-center gap-10"
-          >
-            <DescriptionPage />
-          </Box>
-        </ParallaxLayer>
+      {/* สถานการณ์ */}
 
-        {/* สถานการณ์ */}
-
-        <ParallaxLayer offset={3}>
-          <Box
-            // sx={{
-            //   height: "110dvh",
-            //   backgroundColor: "#FFF2C6 !important",
-            //   pt: "10rem",
-            // }}
-            id="situation"
-          >
-            {/* <div data-aos="fade-up">
+      <Box
+        // sx={{
+        //   height: "110dvh",
+        //   backgroundColor: "#FFF2C6 !important",
+        //   pt: "10rem",
+        // }}
+        id="situation"
+      >
+        {/* <div data-aos="fade-up">
           <Typography
             sx={{
               fontSize: "4rem",
@@ -93,10 +80,8 @@ export default function Community() {
             สถานการณ์
           </Typography>
         </div> */}
-            <SituationPage />
-          </Box>
-        </ParallaxLayer>
-      </Parallax>
+        <SituationPage />
+      </Box>
 
       {/* กระบวนการดำเนินงาน */}
       {/* <Box
