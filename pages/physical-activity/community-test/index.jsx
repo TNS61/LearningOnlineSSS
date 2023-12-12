@@ -48,7 +48,7 @@ export default function Community() {
       <TreeForeground />
 
         </ParallaxLayer> */}
-        <ParallaxLayer sticky={{ start: 1, end: 2 }}>
+        <ParallaxLayer sticky={{ start: 0, end: 2 }}>
           <Box
             id="home"
             sx={{

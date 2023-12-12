@@ -40,12 +40,13 @@ export default function Community() {
       <Box
         id="home"
         sx={{
-          height: "150dvh",
+          height: "220dvh",
           backgroundColor: "#FFF2C6 !important",
           position: "relative",
         }}
+        className="mb-[300px]"
       >
-        <TitlePage />
+        <TitlePage className="" />
       </Box>
 
       <Box
@@ -154,7 +155,7 @@ const MenuBar = () => {
   const router = useRouter();
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
-  const handleClick = (event) => {
+  const handleClick = (event: any) => {
     setAnchorEl(event.currentTarget);
   };
   const handleClose = () => {
