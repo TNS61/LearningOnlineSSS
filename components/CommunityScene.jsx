@@ -82,7 +82,7 @@ export default function CommunityScene() {
           rotation={[0, -2.4, 0]}
           scale={10}
           onClick={"/physical-activity/community"}
-          src={"http://192.168.1.138:3000/model/button_town.glb"}
+          src={"https://www.gforcesolution.com/app/2023/LearningOnlineSSS/model/button_town.glb"}
           positionY={5}
           timeStart={2}
         />
@@ -91,7 +91,7 @@ export default function CommunityScene() {
           rotation={[0, -1.8, 0]}
           scale={10}
           onClick={"/physical-activity/community"}
-          src={"http://192.168.1.138:3000/model/button_School.glb"}
+          src={"https://www.gforcesolution.com/app/2023/LearningOnlineSSS/model/button_School.glb"}
           positionY={10}
           timeStart={0}
         />
@@ -100,7 +100,7 @@ export default function CommunityScene() {
           rotation={[0, -3, 0]}
           scale={10}
           onClick={"/physical-activity/community"}
-          src={"http://192.168.1.138:3000/model/button_Origanize.glb"}
+          src={"https://www.gforcesolution.com/app/2023/LearningOnlineSSS/model/button_Origanize.glb"}
           positionY={15}
           timeStart={1}
         />
@@ -152,7 +152,7 @@ const ButtonCommunity = ({
 };
 
 const Town = () => {
-  const townSrc = "http://192.168.1.138:3000/model/REF_PLANE.glb";
+  const townSrc = "https://www.gforcesolution.com/app/2023/LearningOnlineSSS/model/REF_PLANE.glb";
   const { scene } = useGLTF(townSrc);
 
   return (

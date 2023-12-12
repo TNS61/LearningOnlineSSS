@@ -106,7 +106,7 @@ export default function Home() {
           loop
           className="w-full h-full object-cover z-50"
         >
-          <source src="/Home_01.mp4" type="video/mp4" />
+          <source src="https://www.gforcesolution.com/app/2023/LearningOnlineSSS/Home_01.mp4" type="video/mp4" />
         </video>
       </Box>
       <Box

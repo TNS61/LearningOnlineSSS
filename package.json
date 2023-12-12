@@ -26,7 +26,6 @@
     "next": "14.0.3",
     "parallax-controller": "^1.7.1",
     "react": "^18",
-    "react-animate-on-scroll": "^2.1.7",
     "react-dom": "^18",
     "react-parallax": "^3.5.1",
     "react-player": "^2.13.0",
