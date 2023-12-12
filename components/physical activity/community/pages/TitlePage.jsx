@@ -35,37 +35,40 @@ export default function TitlePage() {
   //   targetElement: target.current,
   //   startScroll: 0.8,
   // });
-  const bottomCityParallax = useParallax({
-    speed: 50,
-    targetElement: target.current,
-    translateX: [-100, 100],
-  });
+  // const bottomCityParallax = useParallax({
+  //   speed: 20,
+  //   targetElement: target.current,
+  //   // translateX: [-100, 100],
+  //   // translateY: [0, 0],
+  // });
 
   const leftMiddleCityParallax = useParallax({
     speed: 40,
     targetElement: target.current,
     startScroll: 0.8,
+    translateX: [100, -100],
   });
 
   const centerMiddleCityParallax = useParallax({
-    speed: 20,
+    speed: 40,
     targetElement: target.current,
     startScroll: 2,
   });
 
   const rightMiddleCityParallax = useParallax({
-    speed: 60,
+    speed: 40,
     targetElement: target.current,
     startScroll: 0.6,
+    translateX: [-100, 100],
   });
 
   const leftTopCity = useParallax({
-    speed: 45,
+    speed: 50,
     targetElement: target.current,
   });
 
   const rightTopCity = useParallax({
-    speed: 70,
+    speed: 50,
     targetElement: target.current,
     startScroll: 0.4,
   });
@@ -97,7 +100,7 @@ export default function TitlePage() {
             width: "fit-content !important",
             left: "50%",
             top: "50%",
-            transform: "translate(-50%,-50%)",
+            transform: "translate(-50%,-70%)",
             zIndex: "10",
           }}
         >
@@ -140,10 +143,10 @@ export default function TitlePage() {
           height: "100% !important",
         }}
       >
-        <div
+        {/* <div
           ref={bottomCityParallax.ref}
-          data-aos="fade-up"
-          data-aos-duration="1500"
+          // data-aos="fade-up"
+          // data-aos-duration="1500"
           data-aos-anchor-placement="top-bottom"
           className="absolute bottom-[3%] left-0 z-[2]"
         >
@@ -155,7 +158,7 @@ export default function TitlePage() {
             className="w-full "
             draggable={false}
           />
-        </div>
+        </div> */}
         <div
           // ref={middleCityParallax.ref}
           data-aos="fade-up"
@@ -171,34 +174,36 @@ export default function TitlePage() {
             className="w-full "
             draggable={false}
           /> */}
-          <Image
-            ref={leftMiddleCityParallax.ref}
-            src={LAYER2_LEFT.src}
-            width={1280}
-            height={1280}
-            alt="LAYER2_LEFT"
-            className="w-full absolute left-0 top-0"
-            draggable={false}
-          />
-          <Image
-            ref={centerMiddleCityParallax.ref}
-            src={LAYER2_MID.src}
-            width={1280}
-            height={1280}
-            alt="LAYER2"
-            className="w-full absolute left-0 top-0  "
-            draggable={false}
-          />
+          <Box className=" scale-[0.8] translate-y-[17vmin]">
+            <Image
+              ref={leftMiddleCityParallax.ref}
+              src={LAYER2_LEFT.src}
+              width={1280}
+              height={1280}
+              alt="LAYER2_LEFT"
+              className="w-full absolute left-0 top-0"
+              draggable={false}
+            />
+            <Image
+              ref={centerMiddleCityParallax.ref}
+              src={LAYER2_MID.src}
+              width={1280}
+              height={1280}
+              alt="LAYER2"
+              className="w-full absolute left-0 top-0  "
+              draggable={false}
+            />
 
-          <Image
-            ref={rightMiddleCityParallax.ref}
-            src={LAYER2_RIGHT.src}
-            width={1280}
-            height={1280}
-            alt="LAYER2"
-            className="w-full absolute left-0 top-0"
-            draggable={false}
-          />
+            <Image
+              ref={rightMiddleCityParallax.ref}
+              src={LAYER2_RIGHT.src}
+              width={1280}
+              height={1280}
+              alt="LAYER2"
+              className="w-full absolute left-0 top-0"
+              draggable={false}
+            />
+          </Box>
         </div>
 
         <div
@@ -206,7 +211,7 @@ export default function TitlePage() {
           data-aos="fade-up"
           data-aos-duration="1000"
           data-aos-anchor-placement="top-bottom"
-          className=" bottom-[1%] left-0 z-[0]"
+          className="relative bottom-[7%] left-0 z-[0]"
         >
           {/* <Image
             src={LAYER3_LEFT.src}
@@ -250,7 +255,7 @@ export default function TitlePage() {
               },
               {
                 property: "translateY",
-                startValue: -0,
+                startValue: 150,
                 endValue: -100,
               },
             ],
