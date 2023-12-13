@@ -153,8 +153,8 @@ export default function TitlePage({ className = "" }) {
         {/* ส่วนชื่อ */}
         <Box
           ref={titleParallax.ref}
-          data-aos="fade-up"
-          data-aos-duration="2000"
+          // data-aos="fade-up"
+          // data-aos-duration="2000"
           sx={{
             position: "relative",
             top: "30%",
