@@ -211,7 +211,7 @@ export default function CommunityScene() {
           anim={"http://192.168.1.138:3000/animation/yoga.json"}
           position={[-2, 1.9, -20]}
         />
-
+<AnimationModel />
         <Controls zoomCamera={zoomCamera} positionCamera={positionCamera} />
       </Canvas>
     </Box>
@@ -766,7 +766,7 @@ const SpriteAnimYoga = ({ textureUrls, anim, position, start }) => {
 };
 
 const AnimationModel = () => {
-  const modelSrc = "http://192.168.1.138:3000/model/character_town.glb";
+  const modelSrc = "http://192.168.1.138:3000/model/character_town_02.glb";
   const { scene, animations } = useGLTF(modelSrc);
 
   const [mixer] = useState(() => new THREE.AnimationMixer(scene));
