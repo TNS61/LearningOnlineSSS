@@ -1,0 +1,28 @@
+{"frames": [
+
+{
+	"filename": "sing01.png",
+	"frame": {"x":0,"y":0,"w":91,"h":90},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":91,"h":90},
+	"sourceSize": {"w":91,"h":90}
+},
+{
+	"filename": "sing02.png",
+	"frame": {"x":91,"y":0,"w":91,"h":90},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":91,"h":90},
+	"sourceSize": {"w":91,"h":90}
+}],
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "Sing.png",
+	"format": "RGBA8888",
+	"size": {"w":182,"h":90},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:bcfb27e8768e290e5920e414e0ce8980:5f0928bf96a1efcae6ed6e56b78bf41c:23b1c9999ff6b916d23aa98f5e46f07b$"
+}
+}

@@ -6,7 +6,7 @@ const nextConfig = {
   // env: {
   //   // NEXT_PUBLIC_GA_MEASUREMENT_ID:"G-2D3WW30X0M",
   //   API_BASE:
-  //     "https://www.gforcesolution.com/app/2023/LearningOnlineSSS/api",
+  //     "http://192.168.1.138:3000/api",
   // },
   images: {
     unoptimized: true,
