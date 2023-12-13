@@ -1,0 +1,44 @@
+{"frames": [
+
+{
+	"filename": "01.png",
+	"frame": {"x":7,"y":7,"w":106,"h":96},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":106,"h":96},
+	"sourceSize": {"w":106,"h":96}
+},
+{
+	"filename": "02.png",
+	"frame": {"x":122,"y":7,"w":106,"h":96},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":106,"h":96},
+	"sourceSize": {"w":106,"h":96}
+},
+{
+	"filename": "03.png",
+	"frame": {"x":7,"y":112,"w":106,"h":96},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":106,"h":96},
+	"sourceSize": {"w":106,"h":96}
+},
+{
+	"filename": "04.png",
+	"frame": {"x":122,"y":112,"w":106,"h":96},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":106,"h":96},
+	"sourceSize": {"w":106,"h":96}
+}],
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "JUMP.png",
+	"format": "RGBA8888",
+	"size": {"w":235,"h":215},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:ea89fea05db588fe9899b3d9b54d0552:60f6d5697b98e5c83a454fadbd5d0b3f:2802b8eac0c776262149032b7748f36d$"
+}
+}

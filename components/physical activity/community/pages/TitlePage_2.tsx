@@ -7,7 +7,7 @@ import {
   LAYER3_LEFT,
   LAYER3_RIGHT,
   TITLE,
-} from "@/assets";
+} from "../../../../assets";
 import { Box } from "@mui/material";
 import Image from "next/image";
 import React, { useEffect } from "react";

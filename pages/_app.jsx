@@ -50,7 +50,7 @@ const SEO = ({ pathname }) => {
       <meta property="twitter:card" content="summary_large_image" />
 
       <meta name="viewport" content="initial-scale=1, width=device-width" />
-      <meta name="theme-color" content="#81c2eb"></meta>
+      {/* <meta name="theme-color" content="#81c2eb"></meta> */}
 
       {/* <script
         async

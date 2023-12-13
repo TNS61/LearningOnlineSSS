@@ -14,7 +14,7 @@ import {
   TENSE,
   TITLE,
   WOMEN_DANCE,
-} from "@/assets";
+} from "../../../../assets";
 
 interface SituationPageProps {}
 
