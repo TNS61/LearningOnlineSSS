@@ -1,0 +1,28 @@
+{"frames": [
+
+{
+	"filename": "yoga01.png",
+	"frame": {"x":7,"y":7,"w":69,"h":80},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":69,"h":80},
+	"sourceSize": {"w":69,"h":80}
+},
+{
+	"filename": "yoga02.png",
+	"frame": {"x":85,"y":7,"w":69,"h":80},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":69,"h":80},
+	"sourceSize": {"w":69,"h":80}
+}],
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "yoga.png",
+	"format": "RGBA8888",
+	"size": {"w":161,"h":94},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:50119bb8ad8cc04842bef3b4b679b25a:3e0e2467d2da7ec62a54bd11ef3ef4f5:ce1f07d74a0210cec2fa949ae8aaea2c$"
+}
+}
