@@ -1,44 +1,35 @@
+import { Box } from "@mui/material";
+import AOS from "aos";
+import Image from "next/image";
+import React, { useCallback, useEffect } from "react";
+import { useParallax } from "react-scroll-parallax";
 import {
   ARM_LEFT,
   ARM_RIGHT,
   FOREGROUND,
-  LAYER2,
-  LAYER3,
+  LAYER2_LEFT,
+  LAYER2_MID,
+  LAYER2_RIGHT,
   LAYER3_LEFT,
   LAYER3_RIGHT,
   TITLE,
   TREE_FOREGROUND_LEFT,
   TREE_FOREGROUND_RIGHT,
 } from "../../../../assets";
-import { Box } from "@mui/material";
-import Image from "next/image";
-import React, { useCallback, useEffect } from "react";
-import AOS from "aos";
-import { Parallax, useParallax } from "react-scroll-parallax";
-import Plx from "react-plx";
-import {
-  LAYER2_LEFT,
-  LAYER2_MID,
-  LAYER2_RIGHT,
-  TREE_FOREGROUND,
-} from "../../../../assets";
-import { motion } from "framer-motion";
 
 export default function TitlePage({ className = "" }) {
   const target = React.useRef(null);
 
   const newTarget = React.useRef(null);
 
-  const [isTreesOut, setIsTreesOut] = React.useState(false);
-
   const [scrollY, setScrollY] = React.useState(0);
 
   const leftMiddleCityParallax = useParallax({
     speed: 1,
     targetElement: target.current,
-    translateX: ["0vw", "-10vw"],
+    translateX: ["10vw", "-10vw"],
     scale: [1, 1.1, 1.2],
-    disabled: scrollY < 50,
+    // disabled: scrollY < 50,
     shouldAlwaysCompleteAnimation: true,
     shouldDisableScalingTranslations: true,
   });
@@ -49,7 +40,7 @@ export default function TitlePage({ className = "" }) {
     // translateY: [20, -20],
     scale: [1, 1.6, 1.7],
     shouldAlwaysCompleteAnimation: true,
-    disabled: scrollY < 50,
+    // disabled: scrollY < 50,
     shouldDisableScalingTranslations: true,
   });
 
@@ -67,6 +58,7 @@ export default function TitlePage({ className = "" }) {
     speed: 0.5,
     targetElement: target.current,
     translateY: ["0vw", "-10vw"],
+    shouldDisableScalingTranslations: true,
     shouldAlwaysCompleteAnimation: true,
   });
 
@@ -75,6 +67,7 @@ export default function TitlePage({ className = "" }) {
     targetElement: target.current,
     startScroll: 0.4,
     translateY: ["0vw", "-10vw"],
+    shouldDisableScalingTranslations: true,
     shouldAlwaysCompleteAnimation: true,
   });
 
@@ -92,6 +85,7 @@ export default function TitlePage({ className = "" }) {
     speed: 1.2,
     targetElement: target.current,
     shouldAlwaysCompleteAnimation: true,
+    shouldDisableScalingTranslations: true,
     startScroll: 0.4,
     translateX: ["0vw", "-100vw"],
   });
@@ -100,6 +94,7 @@ export default function TitlePage({ className = "" }) {
     speed: 10,
     targetElement: target.current,
     shouldAlwaysCompleteAnimation: true,
+    shouldDisableScalingTranslations: true,
     translateX: ["-10vw", "80vw", "easeInOut"],
   });
 
@@ -109,6 +104,7 @@ export default function TitlePage({ className = "" }) {
     translateY: ["0vw", "-20vw"],
     scale: [1, 1.1, 1.2],
     shouldAlwaysCompleteAnimation: true,
+    shouldDisableScalingTranslations: true,
   });
 
   const onScroll = useCallback((event) => {
@@ -153,8 +149,8 @@ export default function TitlePage({ className = "" }) {
         {/* ส่วนชื่อ */}
         <Box
           ref={titleParallax.ref}
-          data-aos="fade-up"
-          data-aos-duration="2000"
+          // data-aos="fade-up"
+          // data-aos-duration="2000"
           sx={{
             position: "relative",
             top: "30%",

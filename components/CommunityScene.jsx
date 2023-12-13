@@ -66,6 +66,7 @@ export default function CommunityScene() {
   };
 
   // const textureUrls = [
+
   //   "http://192.168.1.138:3000/images/g1.png",
   //   "http://192.168.1.138:3000/images/g.png",
   // ];
@@ -132,6 +133,14 @@ export default function CommunityScene() {
           timeStart={1}
         />
         <Town />
+        <group rotation={[0, 0, 0]}>
+          {/* <AnimationModel/> */}
+          {/* <SpriteAnim
+            textureUrls={"http://localhost:3000/images/JUMP.png"}
+            anim={"http://localhost:3000/animation/JUMP.json"}
+          /> */}
+        </group>
+        {/* <Npc src={"http://localhost:3000/images/bicycle.png"} /> */}
 
         <SpriteAnimJump
           textureUrls={"http://192.168.1.138:3000/images/JUMP.png"}
