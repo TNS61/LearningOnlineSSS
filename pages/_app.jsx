@@ -4,6 +4,7 @@ import { CssBaseline, ThemeProvider, createTheme } from "@mui/material";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { ParallaxProvider } from "react-scroll-parallax";
+import "aos/dist/aos.css";
 
 export default function App({ Component, pageProps }) {
   const theme = createTheme({

@@ -8,6 +8,8 @@ import React, { useEffect, useState } from "react";
 import TitlePage from "../../../components/physical activity/community/pages/TitlePage";
 import DescriptionPage from "../../../components/physical activity/community/pages/DescriptionPage";
 import SituationPage from "../../../components/physical activity/community/pages/SituationPage";
+import StatisticPage from "../../../components/physical activity/community/pages/StatisticPage";
+import GamePage from "../../../components/physical activity/community/pages/GamePage";
 
 export default function Community() {
   useEffect(() => {
@@ -37,10 +39,11 @@ export default function Community() {
         <MenuBar />
       </Box>
 
+      {/* 1. Title */}
       <Box
         id="home"
         sx={{
-          height: "220dvh",
+          height: "200dvh",
           backgroundColor: "#FFF2C6 !important",
           position: "relative",
         }}
@@ -49,61 +52,45 @@ export default function Community() {
         <TitlePage className="" />
       </Box>
 
+      {/* 2. Description */}
       <Box
         id="description"
         sx={{
-          height: "150dvh",
+          height: "200dvh",
         }}
-        // className="pt-20 flex flex-col  items-center gap-10"
+        className="mb-[300px]"
       >
         <DescriptionPage />
       </Box>
 
-      {/* สถานการณ์ */}
-
-      <Box
-        // sx={{
-        //   height: "110dvh",
-        //   backgroundColor: "#FFF2C6 !important",
-        //   pt: "10rem",
-        // }}
-        id="situation"
-      >
-        {/* <div data-aos="fade-up">
-          <Typography
-            sx={{
-              fontSize: "4rem",
-              textAlign: "center",
-              fontWeight: "bold",
-              // color: "#fff !important",
-            }}
-          >
-            สถานการณ์
-          </Typography>
-        </div> */}
+      {/* 3. Situation */}
+      <Box id="situation" sx={{ height: "200dvh" }} className="mb-[100px]">
         <SituationPage />
       </Box>
 
-      {/* กระบวนการดำเนินงาน */}
-      {/* <Box
+      {/* 4. Statistic */}
+      <Box
+        id="statistic"
         sx={{
-          height: "110dvh",
-          backgroundColor: "#FFF2C6 !important",
-          pt: "10rem",
+          height: "200dvh",
+          // backgroundColor: "#FFF2C6 !important",
+          // pt: "10rem",
         }}
-        id="process"
+        className="mb-[200px]"
       >
-        <Typography
-          sx={{
-            fontSize: "4rem",
-            textAlign: "center",
-            fontWeight: "bold",
-            // color: "#fff !important",
-          }}
-        >
-          กระบวนการดำเนินงาน
-        </Typography>
-      </Box> */}
+        <StatisticPage />
+      </Box>
+      {/* 4. Statistic */}
+      <Box
+        id="statistic"
+        sx={{
+          height: "200dvh",
+          // backgroundColor: "#FFF2C6 !important",
+          // pt: "10rem",
+        }}
+      >
+        <GamePage />
+      </Box>
 
       {/* เครื่องมือเสริมการทำงาน */}
       {/* <Box

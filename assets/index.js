@@ -131,3 +131,35 @@ export {
   TREE_FOREGROUND_LEFT,
   TREE_FOREGROUND_RIGHT,
 };
+
+// ### Statistic ###
+import PERSON_RUN from "./images/community/statistic/run.png";
+import ORANGE_ARROW_DOWN from "./images/community/statistic/orange_arrow_down.png";
+import FAT_PERSON_01 from "./images/community/statistic/fat_1.png";
+import FAT_PERSON_02 from "./images/community/statistic/fat_2.png";
+import FAT_PERSON_ANIM from "./images/community/statistic/fat_anim.png";
+
+export {
+  PERSON_RUN,
+  ORANGE_ARROW_DOWN,
+  FAT_PERSON_01,
+  FAT_PERSON_02,
+  FAT_PERSON_ANIM,
+};
+
+// ### GAME ###
+import GAME_SPLASHSCREEN from "./images/community/game/splash screen 1.png";
+import GAME_BG from "./images/community/game/game_bg.png";
+import THREE_NUMBER from "./images/community/game/three_number.png";
+import TWO_NUMBER from "./images/community/game/two_number.png";
+import ONE_NUMBER from "./images/community/game/one_number.png";
+import START_TEXT from "./images/community/game/start_text.png";
+
+export {
+  GAME_SPLASHSCREEN,
+  GAME_BG,
+  THREE_NUMBER,
+  TWO_NUMBER,
+  ONE_NUMBER,
+  START_TEXT,
+};
