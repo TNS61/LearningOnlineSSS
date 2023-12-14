@@ -1,0 +1,36 @@
+{"frames": [
+
+{
+	"filename": "ciga01.png",
+	"frame": {"x":0,"y":0,"w":72,"h":139},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":72,"h":139},
+	"sourceSize": {"w":72,"h":139}
+},
+{
+	"filename": "ciga02.png",
+	"frame": {"x":72,"y":0,"w":72,"h":139},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":72,"h":139},
+	"sourceSize": {"w":72,"h":139}
+},
+{
+	"filename": "ciga03.png",
+	"frame": {"x":144,"y":0,"w":72,"h":139},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":72,"h":139},
+	"sourceSize": {"w":72,"h":139}
+}],
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "ciga.png",
+	"format": "RGBA8888",
+	"size": {"w":216,"h":139},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:38e85f924d40b34fdf16cdf20646fb10:4561795121917a2fa4e5c4c97f6f8ecc:409a7079cec1729730e3c7c12a6787e5$"
+}
+}

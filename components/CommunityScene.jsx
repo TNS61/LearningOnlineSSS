@@ -66,8 +66,9 @@ export default function CommunityScene() {
   };
 
   // const textureUrls = [
-  //   "http://localhost:3000/images/g1.png",
-  //   "http://localhost:3000/images/g.png",
+
+  //   "http://192.168.1.138:3000/images/g1.png",
+  //   "http://192.168.1.138:3000/images/g.png",
   // ];
   const frameCount = 3;
   const frameRate = 30;
@@ -102,16 +103,14 @@ export default function CommunityScene() {
         }}
       >
         <fog attach="fog" args={["#ffffff", 50, 250]} />
-        {/* <Cloud concentrate="random" growth={10} color="#ffffff" opacity={1.25} seed={0.3} bounds={100} volume={10} position={[0, 10, 0]} /> */}
-        {/* <Sky sunPosition={[100, 20, 100]} /> */}
+
         <ambientLight intensity={1.25} />
         <ButtonCommunity
           position={[-24, 5, -22]}
           rotation={[0, -2.4, 0]}
           scale={10}
           onClick={"/physical-activity/community"}
-          // src={"http://localhost:3000/model/button_town.glb"}
-          src={"http://localhost:3000/model/button_town.glb"}
+          src={"http://192.168.1.138:3000/model/button_town.glb"}
           positionY={5}
           timeStart={2}
         />
@@ -120,7 +119,7 @@ export default function CommunityScene() {
           rotation={[0, -1.8, 0]}
           scale={10}
           onClick={"/physical-activity/community"}
-          src={"http://localhost:3000/model/button_School.glb"}
+          src={"http://192.168.1.138:3000/model/button_School.glb"}
           positionY={10}
           timeStart={0}
         />
@@ -129,7 +128,7 @@ export default function CommunityScene() {
           rotation={[0, -3, 0]}
           scale={10}
           onClick={"/physical-activity/community"}
-          src={"http://localhost:3000/model/button_Origanize.glb"}
+          src={"http://192.168.1.138:3000/model/button_Origanize.glb"}
           positionY={15}
           timeStart={1}
         />
@@ -142,8 +141,87 @@ export default function CommunityScene() {
           /> */}
         </group>
         {/* <Npc src={"http://localhost:3000/images/bicycle.png"} /> */}
+
+        <SpriteAnimJump
+          textureUrls={"http://192.168.1.138:3000/images/JUMP.png"}
+          anim={"http://192.168.1.138:3000/animation/JUMP.json"}
+        />
+        <SpriteAnimBicycle
+          textureUrls={"http://192.168.1.138:3000/images/bicycle.png"}
+          anim={"http://192.168.1.138:3000/animation/bicycle.json"}
+        />
+        <SpriteAnimCat
+          textureUrls={"http://192.168.1.138:3000/images/cat.png"}
+          anim={"http://192.168.1.138:3000/animation/cat.json"}
+        />
+
+        <SpriteAnimChicken
+          textureUrls={"http://192.168.1.138:3000/images/chicken.png"}
+          anim={"http://192.168.1.138:3000/animation/chicken.json"}
+          position={[-20, 1, 20]}
+        />
+        <SpriteAnimChicken
+          textureUrls={"http://192.168.1.138:3000/images/chicken.png"}
+          anim={"http://192.168.1.138:3000/animation/chicken.json"}
+          position={[10, 1, 20]}
+        />
+        <SpriteAnimCiga
+          textureUrls={"http://192.168.1.138:3000/images/ciga.png"}
+          anim={"http://192.168.1.138:3000/animation/ciga.json"}
+          position={[10, 3, -48]}
+        />
+        <SpriteAnimDuck
+          textureUrls={"http://192.168.1.138:3000/images/duck.png"}
+          anim={"http://192.168.1.138:3000/animation/duck.json"}
+          position={[-17, 2.5, -5]}
+        />
+        <SpriteAnimDuck
+          textureUrls={"http://192.168.1.138:3000/images/duck.png"}
+          anim={"http://192.168.1.138:3000/animation/duck.json"}
+          position={[-38, 2.5, -8]}
+        />
+        <SpriteAnimHappy
+          textureUrls={"http://192.168.1.138:3000/images/h.png"}
+          anim={"http://192.168.1.138:3000/animation/h.json"}
+          position={[-69, 2.5, -8]}
+        />
+        <SpriteAnimMajor
+          textureUrls={"http://192.168.1.138:3000/images/major.png"}
+          anim={"http://192.168.1.138:3000/animation/major.json"}
+          position={[-4, 2.5, 7]}
+        />
+        <SpriteAnimMuaythai
+          textureUrls={"http://192.168.1.138:3000/images/muaythai.png"}
+          anim={"http://192.168.1.138:3000/animation/muaythai.json"}
+          position={[-69, 2.5, 14]}
+        />
+        <SpriteAnimMuaythai
+          textureUrls={"http://192.168.1.138:3000/images/muaythai.png"}
+          anim={"http://192.168.1.138:3000/animation/muaythai.json"}
+          position={[-20, 2.5, -28]}
+        />
+        <SpriteAnimPolice
+          textureUrls={"http://192.168.1.138:3000/images/police.png"}
+          anim={"http://192.168.1.138:3000/animation/police.json"}
+          position={[16, 2.5, 20]}
+        />
+        <SpriteAnimRun
+          textureUrls={"http://192.168.1.138:3000/images/run.png"}
+          anim={"http://192.168.1.138:3000/animation/run.json"}
+          position={[-54, 1.9, -10]}
+        />
+        <SpriteAnimSing
+          textureUrls={"http://192.168.1.138:3000/images/sing.png"}
+          anim={"http://192.168.1.138:3000/animation/sing.json"}
+          position={[-10, 1.9, -9]}
+        />
+        <SpriteAnimYoga
+          textureUrls={"http://192.168.1.138:3000/images/yoga.png"}
+          anim={"http://192.168.1.138:3000/animation/yoga.json"}
+          position={[-2, 1.9, -20]}
+        />
+<AnimationModel />
         <Controls zoomCamera={zoomCamera} positionCamera={positionCamera} />
-        {/* <Environment preset="sunset" background /> */}
       </Canvas>
     </Box>
   );
@@ -189,7 +267,7 @@ const ButtonCommunity = ({
 };
 
 const Town = () => {
-  const townSrc = "http://localhost:3000/model/REF_PLANE.glb";
+  const townSrc = "http://192.168.1.138:3000/model/REF_PLANE.glb";
   const { scene } = useGLTF(townSrc);
 
   return (
@@ -296,13 +374,11 @@ const Controls = ({ zoomCamera, positionCamera }) => {
       const z = e?.target.target.z;
 
       if (x < minX || x > maxX) {
-        console.log(x);
         e?.target.target.setX(x < minX ? minX : maxX);
         camera.position.setX(cameraLastPosition.current.x);
       }
 
       if (z < -40 || z > 10) {
-        console.log(z);
         e?.target.target.setZ(z < -40 ? -40 : 10);
         camera.position.setZ(cameraLastPosition.current.z);
       }
@@ -382,23 +458,20 @@ const Controls = ({ zoomCamera, positionCamera }) => {
 //   );
 // };
 
-const SpriteAnim = ({ textureUrls, anim }) => {
+const SpriteAnimJump = ({ textureUrls, anim }) => {
   const animRef = useRef();
 
   useFrame(({ clock }) => {
     const time = clock.getElapsedTime();
-    animRef.current.position.x = Math.sin(time) * 10;
+    animRef.current.position.y = Math.sin(time * 10) * 0.2;
   });
 
   return (
     <group ref={animRef}>
       <SpriteAnimator
-        scale={[5, 5, 5]}
-        position={[0, 2.5, 25]}
-        // onLoopEnd={onEnd}
-        // frameName={"celebration"}
-        fps={5}
-        // animationNames={['celebration']}
+        scale={4}
+        position={[7, 2, -20]}
+        fps={3}
         autoPlay={true}
         loop={true}
         alphaTest={0.01}
@@ -408,9 +481,301 @@ const SpriteAnim = ({ textureUrls, anim }) => {
     </group>
   );
 };
+const SpriteAnimBicycle = ({ textureUrls, anim }) => {
+  const animRef = useRef();
+
+  useFrame(({ clock }) => {
+    const time = clock.getElapsedTime();
+    animRef.current.position.z = Math.sin(time) * 5;
+  });
+
+  return (
+    <group ref={animRef}>
+      <SpriteAnimator
+        scale={3}
+        position={[19.5, 1.8, -10]}
+        fps={3}
+        autoPlay={true}
+        loop={true}
+        alphaTest={0.01}
+        textureImageURL={textureUrls}
+        textureDataURL={anim}
+        scaleFactor={0.125}
+      />
+    </group>
+  );
+};
+const SpriteAnimCat = ({ textureUrls, anim }) => {
+  const animRef = useRef();
+
+  useFrame(({ clock }) => {
+    const time = clock.getElapsedTime();
+    animRef.current.position.x = Math.sin(time) * 1;
+    // animRef.current.position.z = Math.sin(time) * 1;
+  });
+
+  return (
+    <group ref={animRef}>
+      <SpriteAnimator
+        scale={2.5}
+        position={[-24, 1, 2]}
+        fps={3}
+        autoPlay={true}
+        loop={true}
+        alphaTest={0.01}
+        textureImageURL={textureUrls}
+        textureDataURL={anim}
+        scaleFactor={0.125}
+      />
+    </group>
+  );
+};
+const SpriteAnimChicken = ({ textureUrls, anim, position, start }) => {
+  const animRef = useRef();
+  return (
+    <group ref={animRef}>
+      <SpriteAnimator
+        scale={2}
+        position={position}
+        fps={7}
+        autoPlay={true}
+        loop={true}
+        alphaTest={0.01}
+        textureImageURL={textureUrls}
+        textureDataURL={anim}
+        scaleFactor={0.125}
+      />
+    </group>
+  );
+};
+const SpriteAnimCiga = ({ textureUrls, anim, position, start }) => {
+  const animRef = useRef();
+
+  useFrame(({ clock }) => {
+    const time = clock.getElapsedTime();
+    // animRef.current.position.y = Math.sin(time *7) * 0.5;
+    // animRef.current.position.z = Math.sin(time) * 1;
+  });
+
+  return (
+    <group ref={animRef}>
+      <SpriteAnimator
+        scale={3}
+        position={position}
+        fps={3}
+        autoPlay={true}
+        loop={true}
+        alphaTest={0.01}
+        textureImageURL={textureUrls}
+        textureDataURL={anim}
+        scaleFactor={0.125}
+      />
+    </group>
+  );
+};
+const SpriteAnimDuck = ({ textureUrls, anim, position, start }) => {
+  const animRef = useRef();
+
+  useFrame(({ clock }) => {
+    const time = clock.getElapsedTime();
+    // animRef.current.position.y = Math.sin(time *7) * 0.5;
+    // animRef.current.position.z = Math.sin(time) * 1;
+  });
+
+  return (
+    <group ref={animRef}>
+      <SpriteAnimator
+        scale={5}
+        position={position}
+        fps={3}
+        autoPlay={true}
+        loop={true}
+        alphaTest={0.01}
+        textureImageURL={textureUrls}
+        textureDataURL={anim}
+        scaleFactor={0.125}
+      />
+    </group>
+  );
+};
+const SpriteAnimHappy = ({ textureUrls, anim, position, start }) => {
+  const animRef = useRef();
+
+  useFrame(({ clock }) => {
+    const time = clock.getElapsedTime();
+    animRef.current.position.y = Math.sin(time *7) * 0.2;
+    // animRef.current.position.z = Math.sin(time) * 1;
+  });
+
+  return (
+    <group ref={animRef}>
+      <SpriteAnimator
+        scale={1.5}
+        position={position}
+        fps={3}
+        autoPlay={true}
+        loop={true}
+        alphaTest={0.01}
+        textureImageURL={textureUrls}
+        textureDataURL={anim}
+        scaleFactor={0.125}
+      />
+    </group>
+  );
+};
+const SpriteAnimMajor = ({ textureUrls, anim, position, start }) => {
+  const animRef = useRef();
+
+  useFrame(({ clock }) => {
+    const time = clock.getElapsedTime();
+    // animRef.current.position.y = Math.sin(time *7) * 0.2;
+    // animRef.current.position.z = Math.sin(time) * 1;
+  });
+
+  return (
+    <group ref={animRef}>
+      <SpriteAnimator
+        scale={2}
+        position={position}
+        fps={3}
+        autoPlay={true}
+        loop={true}
+        alphaTest={0.01}
+        textureImageURL={textureUrls}
+        textureDataURL={anim}
+        scaleFactor={0.125}
+      />
+    </group>
+  );
+};
+const SpriteAnimMuaythai = ({ textureUrls, anim, position, start }) => {
+  const animRef = useRef();
+
+  useFrame(({ clock }) => {
+    const time = clock.getElapsedTime();
+    // animRef.current.position.y = Math.sin(time *7) * 0.2;
+    // animRef.current.position.z = Math.sin(time) * 1;
+  });
+
+  return (
+    <group ref={animRef}>
+      <SpriteAnimator
+        scale={2}
+        position={position}
+        fps={3}
+        autoPlay={true}
+        loop={true}
+        alphaTest={0.01}
+        textureImageURL={textureUrls}
+        textureDataURL={anim}
+        scaleFactor={0.125}
+      />
+    </group>
+  );
+};
+const SpriteAnimPolice = ({ textureUrls, anim, position, start }) => {
+  const animRef = useRef();
+
+  useFrame(({ clock }) => {
+    const time = clock.getElapsedTime();
+    // animRef.current.position.y = Math.sin(time *7) * 0.2;
+    // animRef.current.position.z = Math.sin(time) * 1;
+  });
+
+  return (
+    <group ref={animRef}>
+      <SpriteAnimator
+        scale={3}
+        position={position}
+        fps={3}
+        autoPlay={true}
+        loop={true}
+        alphaTest={0.01}
+        textureImageURL={textureUrls}
+        textureDataURL={anim}
+        scaleFactor={0.125}
+      />
+    </group>
+  );
+};
+const SpriteAnimRun = ({ textureUrls, anim, position, start }) => {
+  const animRef = useRef();
+
+  useFrame(({ clock }) => {
+    const time = clock.getElapsedTime();
+    // animRef.current.position.y = Math.sin(time *7) * 0.2;
+    animRef.current.position.z = Math.sin(time) * 3;
+  });
+
+  return (
+    <group ref={animRef}>
+      <SpriteAnimator
+        scale={3}
+        position={position}
+        fps={3}
+        autoPlay={true}
+        loop={true}
+        alphaTest={0.01}
+        textureImageURL={textureUrls}
+        textureDataURL={anim}
+        scaleFactor={0.125}
+      />
+    </group>
+  );
+};
+const SpriteAnimSing = ({ textureUrls, anim, position, start }) => {
+  const animRef = useRef();
+
+  useFrame(({ clock }) => {
+    const time = clock.getElapsedTime();
+    // animRef.current.position.y = Math.sin(time *7) * 0.2;
+    animRef.current.position.x = Math.sin(time) * 3;
+  });
+
+  return (
+    <group ref={animRef}>
+      <SpriteAnimator
+        scale={3}
+        position={position}
+        fps={3}
+        autoPlay={true}
+        loop={true}
+        alphaTest={0.01}
+        textureImageURL={textureUrls}
+        textureDataURL={anim}
+        scaleFactor={0.125}
+      />
+    </group>
+  );
+};
+const SpriteAnimYoga = ({ textureUrls, anim, position, start }) => {
+  const animRef = useRef();
+
+  useFrame(({ clock }) => {
+    const time = clock.getElapsedTime();
+    // animRef.current.position.y = Math.sin(time *7) * 0.2;
+    // animRef.current.position.x = Math.sin(time) * 3;
+  });
+
+  return (
+    <group ref={animRef}>
+      <SpriteAnimator
+        scale={3}
+        position={position}
+        fps={3}
+        autoPlay={true}
+        loop={true}
+        alphaTest={0.01}
+        textureImageURL={textureUrls}
+        textureDataURL={anim}
+        scaleFactor={0.125}
+      />
+    </group>
+  );
+};
 
 const AnimationModel = () => {
-  const modelSrc = "http://localhost:3000/model/character_town.glb";
+  const modelSrc = "http://192.168.1.138:3000/model/character_town_02.glb";
   const { scene, animations } = useGLTF(modelSrc);
 
   const [mixer] = useState(() => new THREE.AnimationMixer(scene));
