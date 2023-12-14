@@ -163,3 +163,10 @@ export {
   ONE_NUMBER,
   START_TEXT,
 };
+
+// ### INTERACTIVES ###
+import GAME_CIRCLE from "./images/community/interactives/game_circle.png";
+import ROLLLER_CIRCLE from "./images/community/interactives/roller_circle.png";
+import SCROLL_CIRCLE from "./images/community/interactives/school_circle.png";
+
+export { GAME_CIRCLE, ROLLLER_CIRCLE, SCROLL_CIRCLE };

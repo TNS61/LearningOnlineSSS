@@ -220,7 +220,7 @@ export default function CommunityScene() {
           anim={"https://www.gforcesolution.com/app/2023/LearningOnlineSSS/animation/yoga.json"}
           position={[-2, 1.9, -20]}
         />
-<AnimationModel />
+        <AnimationModel />
         <Controls zoomCamera={zoomCamera} positionCamera={positionCamera} />
       </Canvas>
     </Box>
@@ -603,7 +603,7 @@ const SpriteAnimHappy = ({ textureUrls, anim, position, start }) => {
 
   useFrame(({ clock }) => {
     const time = clock.getElapsedTime();
-    animRef.current.position.y = Math.sin(time *7) * 0.2;
+    animRef.current.position.y = Math.sin(time * 7) * 0.2;
     // animRef.current.position.z = Math.sin(time) * 1;
   });
 
