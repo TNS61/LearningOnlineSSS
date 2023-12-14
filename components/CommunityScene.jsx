@@ -67,8 +67,8 @@ export default function CommunityScene() {
 
   // const textureUrls = [
 
-  //   "http://192.168.1.138:3000/images/g1.png",
-  //   "http://192.168.1.138:3000/images/g.png",
+  //   "https://www.gforcesolution.com/app/2023/LearningOnlineSSS/images/g1.png",
+  //   "https://www.gforcesolution.com/app/2023/LearningOnlineSSS/images/g.png",
   // ];
   const frameCount = 3;
   const frameRate = 30;
@@ -110,7 +110,7 @@ export default function CommunityScene() {
           rotation={[0, -2.4, 0]}
           scale={10}
           onClick={"/physical-activity/community"}
-          src={"http://192.168.1.138:3000/model/button_town.glb"}
+          src={"https://www.gforcesolution.com/app/2023/LearningOnlineSSS/model/button_town.glb"}
           positionY={5}
           timeStart={2}
         />
@@ -119,7 +119,7 @@ export default function CommunityScene() {
           rotation={[0, -1.8, 0]}
           scale={10}
           onClick={"/physical-activity/community"}
-          src={"http://192.168.1.138:3000/model/button_School.glb"}
+          src={"https://www.gforcesolution.com/app/2023/LearningOnlineSSS/model/button_School.glb"}
           positionY={10}
           timeStart={0}
         />
@@ -128,7 +128,7 @@ export default function CommunityScene() {
           rotation={[0, -3, 0]}
           scale={10}
           onClick={"/physical-activity/community"}
-          src={"http://192.168.1.138:3000/model/button_Origanize.glb"}
+          src={"https://www.gforcesolution.com/app/2023/LearningOnlineSSS/model/button_Origanize.glb"}
           positionY={15}
           timeStart={1}
         />
@@ -143,81 +143,81 @@ export default function CommunityScene() {
         {/* <Npc src={"http://localhost:3000/images/bicycle.png"} /> */}
 
         <SpriteAnimJump
-          textureUrls={"http://192.168.1.138:3000/images/JUMP.png"}
-          anim={"http://192.168.1.138:3000/animation/JUMP.json"}
+          textureUrls={"https://www.gforcesolution.com/app/2023/LearningOnlineSSS/images/JUMP.png"}
+          anim={"https://www.gforcesolution.com/app/2023/LearningOnlineSSS/animation/JUMP.json"}
         />
         <SpriteAnimBicycle
-          textureUrls={"http://192.168.1.138:3000/images/bicycle.png"}
-          anim={"http://192.168.1.138:3000/animation/bicycle.json"}
+          textureUrls={"https://www.gforcesolution.com/app/2023/LearningOnlineSSS/images/bicycle.png"}
+          anim={"https://www.gforcesolution.com/app/2023/LearningOnlineSSS/animation/bicycle.json"}
         />
         <SpriteAnimCat
-          textureUrls={"http://192.168.1.138:3000/images/cat.png"}
-          anim={"http://192.168.1.138:3000/animation/cat.json"}
+          textureUrls={"https://www.gforcesolution.com/app/2023/LearningOnlineSSS/images/cat.png"}
+          anim={"https://www.gforcesolution.com/app/2023/LearningOnlineSSS/animation/cat.json"}
         />
 
         <SpriteAnimChicken
-          textureUrls={"http://192.168.1.138:3000/images/chicken.png"}
-          anim={"http://192.168.1.138:3000/animation/chicken.json"}
+          textureUrls={"https://www.gforcesolution.com/app/2023/LearningOnlineSSS/images/chicken.png"}
+          anim={"https://www.gforcesolution.com/app/2023/LearningOnlineSSS/animation/chicken.json"}
           position={[-20, 1, 20]}
         />
         <SpriteAnimChicken
-          textureUrls={"http://192.168.1.138:3000/images/chicken.png"}
-          anim={"http://192.168.1.138:3000/animation/chicken.json"}
+          textureUrls={"https://www.gforcesolution.com/app/2023/LearningOnlineSSS/images/chicken.png"}
+          anim={"https://www.gforcesolution.com/app/2023/LearningOnlineSSS/animation/chicken.json"}
           position={[10, 1, 20]}
         />
         <SpriteAnimCiga
-          textureUrls={"http://192.168.1.138:3000/images/ciga.png"}
-          anim={"http://192.168.1.138:3000/animation/ciga.json"}
+          textureUrls={"https://www.gforcesolution.com/app/2023/LearningOnlineSSS/images/ciga.png"}
+          anim={"https://www.gforcesolution.com/app/2023/LearningOnlineSSS/animation/ciga.json"}
           position={[10, 3, -48]}
         />
         <SpriteAnimDuck
-          textureUrls={"http://192.168.1.138:3000/images/duck.png"}
-          anim={"http://192.168.1.138:3000/animation/duck.json"}
+          textureUrls={"https://www.gforcesolution.com/app/2023/LearningOnlineSSS/images/duck.png"}
+          anim={"https://www.gforcesolution.com/app/2023/LearningOnlineSSS/animation/duck.json"}
           position={[-17, 2.5, -5]}
         />
         <SpriteAnimDuck
-          textureUrls={"http://192.168.1.138:3000/images/duck.png"}
-          anim={"http://192.168.1.138:3000/animation/duck.json"}
+          textureUrls={"https://www.gforcesolution.com/app/2023/LearningOnlineSSS/images/duck.png"}
+          anim={"https://www.gforcesolution.com/app/2023/LearningOnlineSSS/animation/duck.json"}
           position={[-38, 2.5, -8]}
         />
         <SpriteAnimHappy
-          textureUrls={"http://192.168.1.138:3000/images/h.png"}
-          anim={"http://192.168.1.138:3000/animation/h.json"}
+          textureUrls={"https://www.gforcesolution.com/app/2023/LearningOnlineSSS/images/h.png"}
+          anim={"https://www.gforcesolution.com/app/2023/LearningOnlineSSS/animation/h.json"}
           position={[-69, 2.5, -8]}
         />
         <SpriteAnimMajor
-          textureUrls={"http://192.168.1.138:3000/images/major.png"}
-          anim={"http://192.168.1.138:3000/animation/major.json"}
+          textureUrls={"https://www.gforcesolution.com/app/2023/LearningOnlineSSS/images/major.png"}
+          anim={"https://www.gforcesolution.com/app/2023/LearningOnlineSSS/animation/major.json"}
           position={[-4, 2.5, 7]}
         />
         <SpriteAnimMuaythai
-          textureUrls={"http://192.168.1.138:3000/images/muaythai.png"}
-          anim={"http://192.168.1.138:3000/animation/muaythai.json"}
+          textureUrls={"https://www.gforcesolution.com/app/2023/LearningOnlineSSS/images/muaythai.png"}
+          anim={"https://www.gforcesolution.com/app/2023/LearningOnlineSSS/animation/muaythai.json"}
           position={[-69, 2.5, 14]}
         />
         <SpriteAnimMuaythai
-          textureUrls={"http://192.168.1.138:3000/images/muaythai.png"}
-          anim={"http://192.168.1.138:3000/animation/muaythai.json"}
+          textureUrls={"https://www.gforcesolution.com/app/2023/LearningOnlineSSS/images/muaythai.png"}
+          anim={"https://www.gforcesolution.com/app/2023/LearningOnlineSSS/animation/muaythai.json"}
           position={[-20, 2.5, -28]}
         />
         <SpriteAnimPolice
-          textureUrls={"http://192.168.1.138:3000/images/police.png"}
-          anim={"http://192.168.1.138:3000/animation/police.json"}
+          textureUrls={"https://www.gforcesolution.com/app/2023/LearningOnlineSSS/images/police.png"}
+          anim={"https://www.gforcesolution.com/app/2023/LearningOnlineSSS/animation/police.json"}
           position={[16, 2.5, 20]}
         />
         <SpriteAnimRun
-          textureUrls={"http://192.168.1.138:3000/images/run.png"}
-          anim={"http://192.168.1.138:3000/animation/run.json"}
+          textureUrls={"https://www.gforcesolution.com/app/2023/LearningOnlineSSS/images/run.png"}
+          anim={"https://www.gforcesolution.com/app/2023/LearningOnlineSSS/animation/run.json"}
           position={[-54, 1.9, -10]}
         />
         <SpriteAnimSing
-          textureUrls={"http://192.168.1.138:3000/images/sing.png"}
-          anim={"http://192.168.1.138:3000/animation/sing.json"}
+          textureUrls={"https://www.gforcesolution.com/app/2023/LearningOnlineSSS/images/sing.png"}
+          anim={"https://www.gforcesolution.com/app/2023/LearningOnlineSSS/animation/sing.json"}
           position={[-10, 1.9, -9]}
         />
         <SpriteAnimYoga
-          textureUrls={"http://192.168.1.138:3000/images/yoga.png"}
-          anim={"http://192.168.1.138:3000/animation/yoga.json"}
+          textureUrls={"https://www.gforcesolution.com/app/2023/LearningOnlineSSS/images/yoga.png"}
+          anim={"https://www.gforcesolution.com/app/2023/LearningOnlineSSS/animation/yoga.json"}
           position={[-2, 1.9, -20]}
         />
 <AnimationModel />
@@ -267,7 +267,7 @@ const ButtonCommunity = ({
 };
 
 const Town = () => {
-  const townSrc = "http://192.168.1.138:3000/model/REF_PLANE.glb";
+  const townSrc = "https://www.gforcesolution.com/app/2023/LearningOnlineSSS/model/REF_PLANE.glb";
   const { scene } = useGLTF(townSrc);
 
   return (
@@ -775,7 +775,7 @@ const SpriteAnimYoga = ({ textureUrls, anim, position, start }) => {
 };
 
 const AnimationModel = () => {
-  const modelSrc = "http://192.168.1.138:3000/model/character_town_02.glb";
+  const modelSrc = "https://www.gforcesolution.com/app/2023/LearningOnlineSSS/model/character_town_02.glb";
   const { scene, animations } = useGLTF(modelSrc);
 
   const [mixer] = useState(() => new THREE.AnimationMixer(scene));
