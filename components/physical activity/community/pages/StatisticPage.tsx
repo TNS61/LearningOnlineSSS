@@ -170,6 +170,7 @@ const StatisticPage: FC<StatisTicPageProps> = ({}) => {
                     src={PERSON_RUN.src}
                     alt="person run"
                     className="w-20 h-20"
+                    key={i}
                   />
                 ))}
               </div>
@@ -183,6 +184,7 @@ const StatisticPage: FC<StatisTicPageProps> = ({}) => {
                     src={PERSON_RUN.src}
                     alt="person run"
                     className="w-20 h-20"
+                    key={i}
                   />
                 ))}
               </div>
@@ -303,6 +305,7 @@ const StatisticPage: FC<StatisTicPageProps> = ({}) => {
                     src={PERSON_RUN.src}
                     alt="person run"
                     className="w-20 h-20"
+                    key={i}
                   />
                 ))}
               </div>
@@ -316,6 +319,7 @@ const StatisticPage: FC<StatisTicPageProps> = ({}) => {
                     src={PERSON_RUN.src}
                     alt="person run"
                     className="w-20 h-20"
+                    key={i}
                   />
                 ))}
               </div>
