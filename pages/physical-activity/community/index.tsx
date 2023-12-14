@@ -10,6 +10,7 @@ import DescriptionPage from "../../../components/physical activity/community/pag
 import SituationPage from "../../../components/physical activity/community/pages/SituationPage";
 import StatisticPage from "../../../components/physical activity/community/pages/StatisticPage";
 import GamePage from "../../../components/physical activity/community/pages/GamePage";
+import InteractivesPage from "../../../components/physical activity/community/pages/InteractivesPage";
 
 export default function Community() {
   useEffect(() => {
@@ -80,7 +81,13 @@ export default function Community() {
       >
         <StatisticPage />
       </Box>
-      {/* 4. Statistic */}
+
+      {/* 5. Situation */}
+      <Box id="situation" sx={{ height: "200dvh" }} className="mb-[100px]">
+        <InteractivesPage />
+      </Box>
+
+      {/* 6. Game */}
       <Box
         id="statistic"
         sx={{
