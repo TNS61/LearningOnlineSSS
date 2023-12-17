@@ -44,7 +44,7 @@ export default function Community() {
       <Box
         id="home"
         sx={{
-          height: "200dvh",
+          height: "250dvh",
           backgroundColor: "#FFF2C6 !important",
           position: "relative",
         }}
