@@ -121,17 +121,22 @@ const SituationPage: FC<SituationPageProps> = ({}) => {
           <div ref={behaviorTitleRef}></div>
 
           <div
-            data-aos="zoom-in"
-            data-aos-duration="400"
-            data-aos-delay="700"
+            data-aos="fade-down-left"
+            // data-aos-duration="400"
+            data-aos-duration="1000"
+            data-aos-delay="2000"
+            data-aos-easing="ease-out-back"
+            // data-aos-anchor-placement="right-left"
             // data-aos-offset="200"
             data-aos-offset="300"
             className="absolute top-0 left-[15%] rounded-full bg-[#20C382] w-[22rem] h-[22rem] z-10 text-center grid grid-rows-3 justify-center items-center p-3 cursor-pointer"
           >
             <div
-              data-aos="zoom-in"
+              data-aos="zoom-im"
+              // data-aos-duration="400"
               data-aos-duration="400"
-              data-aos-delay="900"
+              data-aos-delay="1900"
+              // data-aos-anchor-placement="right-left"
               // data-aos-offset="200"
               className="flex items-start justify-center top-[-20%] relative"
             >
@@ -187,9 +192,10 @@ const SituationPage: FC<SituationPageProps> = ({}) => {
           </div>
 
           <div
-            data-aos="zoom-in"
-            data-aos-duration="400"
-            data-aos-delay="1000"
+            data-aos="fade-down-right"
+            data-aos-duration="1000"
+            data-aos-delay="2200"
+            data-aos-easing="ease-out-back"
             // data-aos-offset="300"
             data-aos-offset="400"
             className="absolute top-0 right-[15%] rounded-full bg-[#20C382] w-[22rem] h-[22rem] z-10 text-center grid grid-rows-3 justify-center items-center p-3  overflow-visibl cursor-pointer"
@@ -198,7 +204,7 @@ const SituationPage: FC<SituationPageProps> = ({}) => {
               data-aos="zoom-in"
               data-aos-duration="400"
               // data-aos-delay="1150"
-              data-aos-delay="1050"
+              data-aos-delay="2050"
               // data-aos-offset="300"
               className="flex items-start justify-center top-[-50%] relative"
             >
@@ -254,9 +260,10 @@ const SituationPage: FC<SituationPageProps> = ({}) => {
           </div>
 
           <div
-            data-aos="zoom-in"
-            data-aos-duration="400"
-            data-aos-delay="600"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+            data-aos-delay="1600"
+            data-aos-easing="ease-out-back"
             // data-aos-offset="500"
             data-aos-offset="500"
             className="absolute bottom-0 left-[-5%] rounded-full bg-[#20C382] w-[22rem] h-[22rem] z-10 text-center grid grid-rows-3 justify-center items-center p-3 cursor-pointer"
@@ -264,7 +271,7 @@ const SituationPage: FC<SituationPageProps> = ({}) => {
             <div
               data-aos="zoom-in"
               data-aos-duration="400"
-              data-aos-delay="750"
+              data-aos-delay="1750"
               // data-aos-offset="500"
               className="flex items-start justify-center  top-[-30%] relative"
             >
@@ -320,10 +327,11 @@ const SituationPage: FC<SituationPageProps> = ({}) => {
           </div>
 
           <div
-            data-aos="zoom-in"
-            data-aos-duration="400"
+            data-aos="fade-right"
+            data-aos-duration="1000"
             // data-aos-delay="1600"
-            data-aos-delay="600"
+            data-aos-delay="1800"
+            data-aos-easing="ease-out-back"
             // data-aos-offset="700"
             data-aos-offset="600"
             className="absolute bottom-0 right-[-5%] rounded-full bg-[#20C382] w-[22rem] h-[22rem] z-10 text-center grid grid-rows-3 justify-center items-center p-3  cursor-pointer"
@@ -332,7 +340,7 @@ const SituationPage: FC<SituationPageProps> = ({}) => {
               data-aos="zoom-in"
               data-aos-duration="400"
               // data-aos-delay="1750"
-              data-aos-delay="750"
+              data-aos-delay="1750"
               // data-aos-offset="700"
               data-aos-offset="200"
               className="flex items-start justify-center top-[-30%] relative"

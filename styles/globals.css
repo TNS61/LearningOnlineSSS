@@ -254,13 +254,13 @@ body {
 .slide-in-elliptic-top-fwd {
   -webkit-animation: slide-in-elliptic-top-fwd 0.7s,
     slide-up 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  -webkit-animation-delay: 0s, 1.5s;
+  -webkit-animation-delay: 0s, 1s;
   animation: slide-in-elliptic-top-fwd 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94)
       both,
     slide-up 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation-duration: 1000ms, 1000ms;
   animation-iteration-count: 1, 1;
-  animation-delay: 0s, 1.5s;
+  animation-delay: 0s, 1s;
 }
 
 @-webkit-keyframes slide-in-elliptic-top-fwd {
@@ -326,13 +326,13 @@ body {
   -webkit-animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
       both,
     slide-up 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  -webkit-animation-delay: 0.7s, 1.5s;
+  -webkit-animation-delay: 0.7s, 1s;
 
   animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both,
     slide-up 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation-duration: 1000ms, 1000ms;
   animation-iteration-count: 1, 1;
-  animation-delay: 0.7s, 1.5s;
+  animation-delay: 0.7s, 1s;
 }
 
 @-webkit-keyframes scale-in-center {
