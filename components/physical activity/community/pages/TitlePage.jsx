@@ -4,6 +4,10 @@ import Image from "next/image";
 import React, { useCallback, useEffect } from "react";
 import { useParallax } from "react-scroll-parallax";
 import {
+  ANIMATED_LIFTING_02,
+  ANIMATED_LIFTING_04,
+  ANIMATED_RUNNING,
+  ANIMATE_YOGA,
   ARM_LEFT,
   ARM_RIGHT,
   FOREGROUND,
@@ -82,20 +86,20 @@ export default function TitlePage({ className = "" }) {
   });
 
   const LeftTreeForeground = useParallax({
-    speed: 1.2,
+    speed: 0.5,
     targetElement: target.current,
     shouldAlwaysCompleteAnimation: true,
     shouldDisableScalingTranslations: true,
     startScroll: 0.4,
-    translateX: ["0vw", "-100vw"],
+    translateX: ["0vw", "-110vw", "easeOutQuad"],
   });
 
   const RightTreeForeground = useParallax({
-    speed: 10,
+    speed: 1,
     targetElement: target.current,
     shouldAlwaysCompleteAnimation: true,
     shouldDisableScalingTranslations: true,
-    translateX: ["-10vw", "80vw", "easeInOut"],
+    translateX: ["-10vw", "90vw", "easeOutSine"],
   });
 
   const titleParallax = useParallax({
@@ -105,6 +109,38 @@ export default function TitlePage({ className = "" }) {
     scale: [1, 1.1, 1.2],
     shouldAlwaysCompleteAnimation: true,
     shouldDisableScalingTranslations: true,
+  });
+
+  const exercise_person_01 = useParallax({
+    speed: 0.4,
+    targetElement: target.current,
+    opacity: [0, 1, "easeOutQuint"],
+    translateX: ["0vw", "-7vw"],
+    shouldAlwaysCompleteAnimation: true,
+  });
+
+  const exercise_person_02 = useParallax({
+    speed: 0.5,
+    targetElement: target.current,
+    opacity: [0, 1, "easeOutExpo"],
+    translateY: ["0vw", "-4vw"],
+    shouldAlwaysCompleteAnimation: true,
+  });
+
+  const exercise_person_03 = useParallax({
+    speed: 1,
+    targetElement: target.current,
+    opacity: [0, 1, "easeOutCirc"],
+    translateX: ["0vw", "10vw"],
+    shouldAlwaysCompleteAnimation: true,
+  });
+
+  const exercise_person_04 = useParallax({
+    speed: 0.6,
+    targetElement: target.current,
+    opacity: [0, 1, "easeOutBack"],
+    translateX: ["0vw", "10vw"],
+    shouldAlwaysCompleteAnimation: true,
   });
 
   const onScroll = useCallback((event) => {
@@ -211,7 +247,7 @@ export default function TitlePage({ className = "" }) {
             // data-aos="fade-up"
             // data-aos-duration="1500"
             data-aos-anchor-placement="top-bottom"
-            className="absolute bottom-[3%] left-0 z-[2]"
+            className="absolute bottom-[3%] left-0 z-[3]"
           >
             <Image
               src={FOREGROUND.src}
@@ -227,7 +263,7 @@ export default function TitlePage({ className = "" }) {
             data-aos="fade-up"
             data-aos-duration="1500"
             data-aos-anchor-placement="top-bottom"
-            className="relative bottom-[1%] left-0 z-[1]"
+            className="relative bottom-[1%] left-0 z-[2]"
           >
             {/* <Image
             src={LAYER2.src}
@@ -264,6 +300,61 @@ export default function TitlePage({ className = "" }) {
                 height={1280}
                 alt="LAYER2"
                 className="w-full absolute left-0 top-0"
+                draggable={false}
+              />
+            </Box>
+          </div>
+
+          {/* คนออกกำลังกาย */}
+          <div
+            // ref={middleCityParallax.ref}
+            className="relative bottom-[1%] left-0 z-[1] w-full"
+          >
+            {/* <Image
+            src={LAYER2.src}
+            width={1280}
+            height={1280}
+            alt="LAYER2"
+            className="w-full "
+            draggable={false}
+          /> */}
+            <Box className="relative scale-[0.8] translate-y-[45vmin] w-full flex justify-between">
+              <Image
+                ref={exercise_person_01.ref}
+                src={ANIMATED_LIFTING_02.src}
+                width={1280}
+                height={1280}
+                alt="ANIMATED_LIFTING_02"
+                className="w-[400px] absolute -left-[5vw] top-0"
+                draggable={false}
+              />
+              <Image
+                ref={exercise_person_02.ref}
+                src={ANIMATE_YOGA.src}
+                width={1280}
+                height={1280}
+                alt="ANIMATE_YOGA"
+                className="w-[400px] absolute left-[33%] top-[45%] "
+                draggable={false}
+              />
+
+              <Image
+                ref={exercise_person_03.ref}
+                src={ANIMATED_LIFTING_04.src}
+                width={1280}
+                height={1280}
+                alt="LAYER2"
+                className="w-[400px] absolute right-[15%] -top-[1vh]"
+                draggable={false}
+              />
+
+              <Image
+                ref={exercise_person_04.ref}
+                src={ANIMATED_RUNNING.src}
+                width={1280}
+                height={1280}
+                alt="LAYER2"
+                className="w-[400px] absolute right-[-7%] -top-[6vh]"
                 draggable={false}
               />
             </Box>

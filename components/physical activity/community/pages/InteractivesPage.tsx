@@ -17,6 +17,9 @@ import {
   GAME_CIRCLE,
   GAME_SPLASHSCREEN,
   MEN_DANCE,
+  QR_CODE_GAME,
+  QR_CODE_ROLLER,
+  QR_CODE_SCHOOL,
   REST,
   ROLLLER_CIRCLE,
   SCROLL_CIRCLE,
@@ -91,7 +94,7 @@ const InteractivesPage: FC<InteractivesPageProps> = ({}) => {
           overflow: "visible !important",
         }}
       >
-        <Box className="flex flex-col justify-start items-center gap-10 h-full w-full">
+        <Box className="flex flex-col justify-start items-center gap-6 h-full w-full">
           <motion.div
             className="relative w-fit leading-none"
             animate={{ y: [0, 5, -15], scale: [1, 1.05, 1] }}
@@ -143,7 +146,7 @@ const InteractivesPage: FC<InteractivesPageProps> = ({}) => {
               data-aos-duration="400"
               data-aos-delay="700"
               data-aos-offset="100"
-              className="flex flex-col gap-4"
+              className="flex flex-col gap-4 justify-between"
               href="https://www.gforcesolution.com/app/2023/LearningOnlineSSS/games/src/"
               target="_blank"
             >
@@ -163,7 +166,7 @@ const InteractivesPage: FC<InteractivesPageProps> = ({}) => {
                   backgroundPosition: "center",
                 }}
               ></div>
-              <div className="text-4xl">
+              <div className="text-3xl">
                 <p className="text-center text-[#F47920]  font-bold leading-none">
                   แค่ขยับ
                 </p>
@@ -174,6 +177,14 @@ const InteractivesPage: FC<InteractivesPageProps> = ({}) => {
                   ออกกำลังกาย
                 </p>
               </div>
+              <div className="flex items-center justify-center">
+                <Image
+                  src={QR_CODE_GAME.src}
+                  width={120}
+                  height={120}
+                  alt="QR_CODE_GAME"
+                />
+              </div>
             </Link>
 
             <Link
@@ -181,7 +192,7 @@ const InteractivesPage: FC<InteractivesPageProps> = ({}) => {
               data-aos-duration="400"
               data-aos-delay="1000"
               data-aos-offset="100"
-              className="flex flex-col gap-4"
+              className="flex flex-col gap-4 justify-between"
               href="https://www.gforcesolution.com/app/theverse/game/rollercoser.html"
               target="_blank"
             >
@@ -201,13 +212,21 @@ const InteractivesPage: FC<InteractivesPageProps> = ({}) => {
                   backgroundPosition: "center",
                 }}
               ></div>
-              <div className="text-4xl">
+              <div className="text-3xl">
                 <p className="text-center text-[#F47920]  font-bold leading-none">
                   Interactive
                 </p>
                 <p className="text-center text-[#F47920]  font-bold leading-none">
                   Discover WebGL
                 </p>
+              </div>
+              <div className="flex items-center justify-center">
+                <Image
+                  src={QR_CODE_ROLLER.src}
+                  width={120}
+                  height={120}
+                  alt="QR_CODE_GAME"
+                />
               </div>
             </Link>
 
@@ -217,7 +236,7 @@ const InteractivesPage: FC<InteractivesPageProps> = ({}) => {
               data-aos-duration="400"
               data-aos-delay="1300"
               data-aos-offset="0"
-              className="flex flex-col gap-4"
+              className="flex flex-col gap-4 justify-between"
             >
               <Typography className="text-center text-[#F47920] text-3xl font-bold">
                 Interactive
@@ -235,13 +254,21 @@ const InteractivesPage: FC<InteractivesPageProps> = ({}) => {
                   backgroundPosition: "center",
                 }}
               ></div>
-              <div className="text-4xl">
+              <div className="text-3xl">
                 <p className="text-center text-[#F47920]  font-bold leading-none">
                   Interactive
                 </p>
                 <p className="text-center text-[#F47920]  font-bold leading-none">
                   Side Scrolling
                 </p>
+              </div>
+              <div className="flex items-center justify-center">
+                <Image
+                  src={QR_CODE_SCHOOL.src}
+                  width={120}
+                  height={120}
+                  alt="QR_CODE_GAME"
+                />
               </div>
             </Link>
           </section>

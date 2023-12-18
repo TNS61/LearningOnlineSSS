@@ -140,7 +140,7 @@ export default function DescriptionPage() {
               position: "relative",
             }}
           >
-            <div className="absolute bottom-10 right-[15%]">
+            <div className="absolute bottom-5 right-[15%]">
               <motion.img
                 src={MEN_DANCE.src}
                 width={1280}
@@ -169,7 +169,7 @@ export default function DescriptionPage() {
               draggable={false}
             /> */}
             </div>
-            <div className="absolute bottom-10 left-[15%]">
+            <div className="absolute bottom-5 left-[15%]">
               <motion.img
                 src={WOMEN_DANCE.src}
                 width={1280}

@@ -170,3 +170,33 @@ import ROLLLER_CIRCLE from "./images/community/interactives/roller_circle.png";
 import SCROLL_CIRCLE from "./images/community/interactives/school_circle.png";
 
 export { GAME_CIRCLE, ROLLLER_CIRCLE, SCROLL_CIRCLE };
+
+// ####################### Physical Activity ########################
+
+import ANIMATED_CYCLING from "./images/community/people/animated_cyling.png";
+import ANIMATED_LIFTING_01 from "./images/community/people/animated_lifting1.png";
+import ANIMATED_LIFTING_02 from "./images/community/people/animated_lifting2.png";
+import ANIMATED_LIFTING_03 from "./images/community/people/animated_lifting3.png";
+import ANIMATED_LIFTING_04 from "./images/community/people/animated_lifting4.png";
+import ANIMATED_ROPE_JUMPING from "./images/community/people/animated_ropejump.png";
+import ANIMATED_RUNNING from "./images/community/people/animated_running.png";
+import ANIMATED_SITUP from "./images/community/people/animated_situp.png";
+import ANIMATE_YOGA from "./images/community/people/animated_yoga.png";
+
+export {
+  ANIMATED_CYCLING,
+  ANIMATED_LIFTING_01,
+  ANIMATED_LIFTING_02,
+  ANIMATED_LIFTING_03,
+  ANIMATED_LIFTING_04,
+  ANIMATED_ROPE_JUMPING,
+  ANIMATED_RUNNING,
+  ANIMATED_SITUP,
+  ANIMATE_YOGA,
+};
+
+import QR_CODE_GAME from "./images/community/interactives/qr-code_game.png";
+import QR_CODE_ROLLER from "./images/community/interactives/qr-code_roller.png";
+import QR_CODE_SCHOOL from "./images/community/interactives/qr-code_school.png";
+
+export { QR_CODE_GAME, QR_CODE_ROLLER, QR_CODE_SCHOOL };

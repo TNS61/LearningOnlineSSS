@@ -163,9 +163,10 @@ const StatisticPage: FC<StatisTicPageProps> = ({}) => {
               <div className="flex flex-row-reverse">
                 {Array.from({ length: 5 }, (_, i) => i).map((item, i) => (
                   <img
-                    data-aos="zoom-in"
-                    data-aos-duraton="100"
-                    data-aos-delay={1000 + i * 100}
+                    data-aos="fade-right"
+                    data-aos-duraton="50"
+                    data-aos-easing="ease-in-back"
+                    data-aos-delay={1000 + i * 150}
                     data-aos-offset="200"
                     src={PERSON_RUN.src}
                     alt="person run"
@@ -177,9 +178,10 @@ const StatisticPage: FC<StatisTicPageProps> = ({}) => {
               <div className="flex flex-row-reverse">
                 {Array.from({ length: 5 }, (_, i) => i).map((item, i) => (
                   <img
-                    data-aos="zoom-in"
-                    data-aos-duraton="100"
-                    data-aos-delay={500 + i * 100}
+                    data-aos="fade-right"
+                    data-aos-duraton="50"
+                    data-aos-easing="ease-in-back"
+                    data-aos-delay={500 + i * 150}
                     data-aos-offset="300"
                     src={PERSON_RUN.src}
                     alt="person run"
@@ -296,32 +298,38 @@ const StatisticPage: FC<StatisTicPageProps> = ({}) => {
             </div>
             <Box className="row-span-2 flex flex-row flex-wrap-reverse items-center justify-center">
               <div className="flex flex-row-reverse">
-                {Array.from({ length: 3 }, (_, i) => i).map((item, i) => (
-                  <img
-                    data-aos="zoom-in"
-                    data-aos-duraton="100"
-                    data-aos-delay={2000 + i * 100}
-                    data-aos-offset="200"
-                    src={PERSON_RUN.src}
-                    alt="person run"
-                    className="w-20 h-20"
-                    key={i}
-                  />
-                ))}
+                {Array.from({ length: 3 }, (_, i) => i)
+                  .map((item, i) => (
+                    <img
+                      data-aos="fade-right"
+                      data-aos-duraton="100"
+                      data-aos-easing="ease-in-back"
+                      data-aos-delay={2000 + i * 150}
+                      data-aos-offset="200"
+                      src={PERSON_RUN.src}
+                      alt="person run"
+                      className="w-20 h-20"
+                      key={i}
+                    />
+                  ))
+                  .reverse()}
               </div>
               <div className="flex flex-row-reverse">
-                {Array.from({ length: 3 }, (_, i) => i).map((item, i) => (
-                  <img
-                    data-aos="zoom-in"
-                    data-aos-duraton="100"
-                    data-aos-delay={1300 + i * 100}
-                    data-aos-offset="300"
-                    src={PERSON_RUN.src}
-                    alt="person run"
-                    className="w-20 h-20"
-                    key={i}
-                  />
-                ))}
+                {Array.from({ length: 3 }, (_, i) => i)
+                  .map((item, i) => (
+                    <img
+                      data-aos="fade-right"
+                      data-aos-duraton="100"
+                      data-aos-easing="ease-in-back"
+                      data-aos-delay={1300 + i * 150}
+                      data-aos-offset="300"
+                      src={PERSON_RUN.src}
+                      alt="person run"
+                      className="w-20 h-20"
+                      key={i}
+                    />
+                  ))
+                  .reverse()}
               </div>
             </Box>
             <Typography
