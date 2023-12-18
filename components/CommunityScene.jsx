@@ -363,7 +363,7 @@ const Controls = ({ zoomCamera, positionCamera }) => {
 
   const limitPanningDistance = useCallback(
     (e) => {
-      const maxX = 43;
+      const maxX = 5;
       const minX = -70;
 
       const maxZ = 15;
@@ -378,8 +378,8 @@ const Controls = ({ zoomCamera, positionCamera }) => {
         camera.position.setX(cameraLastPosition.current.x);
       }
 
-      if (z < -40 || z > 10) {
-        e?.target.target.setZ(z < -40 ? -40 : 10);
+      if (z < -40 || z > 0) {
+        e?.target.target.setZ(z < -40 ? -40 : 0);
         camera.position.setZ(cameraLastPosition.current.z);
       }
 
@@ -775,7 +775,7 @@ const SpriteAnimYoga = ({ textureUrls, anim, position, start }) => {
 };
 
 const AnimationModel = () => {
-  const modelSrc = "https://www.gforcesolution.com/app/2023/LearningOnlineSSS/model/character_town_02.glb";
+  const modelSrc = "https://www.gforcesolution.com/app/2023/LearningOnlineSSS/model/character_town_03.glb";
   const { scene, animations } = useGLTF(modelSrc);
 
   const [mixer] = useState(() => new THREE.AnimationMixer(scene));

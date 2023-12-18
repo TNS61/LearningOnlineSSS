@@ -212,7 +212,8 @@ const InteractivesPage: FC<InteractivesPageProps> = ({}) => {
             </Link>
 
             <Link
-              href="#"
+              href="https://www.gforcesolution.com/app/2023/LearningOnlineSSS//school/"
+              target="_blank"
               data-aos="zoom-in"
               data-aos-duration="400"
               data-aos-delay="1300"
