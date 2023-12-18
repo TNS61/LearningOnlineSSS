@@ -775,7 +775,7 @@ const SpriteAnimYoga = ({ textureUrls, anim, position, start }) => {
 };
 
 const AnimationModel = () => {
-  const modelSrc = "https://www.gforcesolution.com/app/2023/LearningOnlineSSS/model/character_town_03.glb";
+  const modelSrc = "https://www.gforcesolution.com/app/2023/LearningOnlineSSS/model/character_town_05.glb";
   const { scene, animations } = useGLTF(modelSrc);
 
   const [mixer] = useState(() => new THREE.AnimationMixer(scene));
