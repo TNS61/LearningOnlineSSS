@@ -438,7 +438,7 @@ export default function TitlePage({ className = "" }) {
           data-aos="fade-up"
           data-aos-duration="1000"
           data-aos-anchor-placement="top-bottom"
-          className="fixed bottom-[-60%] right-0 z-[10] w-full "
+          className="fixed bottom-[0%] right-0 z-[10] w-full  h-5/6 "
         >
           <Image
             ref={LeftTreeForeground.ref}
@@ -446,7 +446,7 @@ export default function TitlePage({ className = "" }) {
             width={1280}
             height={1280}
             alt="TREE_FOREGROUND_LEFT"
-            className="w- right-0"
+            className=" right-0"
             draggable={false}
           />
         </div>
@@ -454,7 +454,7 @@ export default function TitlePage({ className = "" }) {
           data-aos="fade-up"
           data-aos-duration="1000"
           data-aos-anchor-placement="top-bottom"
-          className="fixed bottom-[-60%] left-[50%] z-[10] w-full "
+          className="fixed bottom-[0%] left-[50%] z-[10] w-2/3 h-3/4  "
         >
           <Image
             ref={RightTreeForeground.ref}

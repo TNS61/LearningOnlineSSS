@@ -85,7 +85,9 @@ const InteractivesPage: FC<InteractivesPageProps> = ({}) => {
           width: "100% !important",
           // backgroundColor: "#FFF2C6 !important",
           position: "relative",
-          pt: "5rem",
+          // pt: "5rem",
+          pt: "2rem",
+          px: "2rem",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
@@ -94,7 +96,7 @@ const InteractivesPage: FC<InteractivesPageProps> = ({}) => {
           overflow: "visible !important",
         }}
       >
-        <Box className="flex flex-col justify-start items-center gap-6 h-full w-full">
+        <Box className="flex flex-col justify-start items-center gap-4 h-full w-full">
           <motion.div
             className="relative w-fit leading-none"
             animate={{ y: [0, 5, -15], scale: [1, 1.05, 1] }}
@@ -113,7 +115,8 @@ const InteractivesPage: FC<InteractivesPageProps> = ({}) => {
               sx={{
                 textAlign: "top",
                 color: "#F47920",
-                fontSize: "5rem",
+                // fontSize: "5rem",
+                fontSize: "3.5rem",
                 fontWeight: "bold",
                 textShadow:
                   " 4px 0 #fff, -4px 0 #fff, 0 4px #fff, 0 -4px #fff, 1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff",
@@ -129,7 +132,8 @@ const InteractivesPage: FC<InteractivesPageProps> = ({}) => {
               sx={{
                 textAlign: "center",
                 color: "#138E77",
-                fontSize: "4rem",
+                // fontSize: "4rem",
+                fontSize: "2.5rem",
                 fontWeight: "",
                 textShadow:
                   " 4px 0 #fff, -4px 0 #fff, 0 4px #fff, 0 -4px #fff, 1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff",
@@ -166,7 +170,7 @@ const InteractivesPage: FC<InteractivesPageProps> = ({}) => {
                   backgroundPosition: "center",
                 }}
               ></div>
-              <div className="text-3xl">
+              <div className="text-2xl">
                 <p className="text-center text-[#F47920]  font-bold leading-none">
                   แค่ขยับ
                 </p>
@@ -212,7 +216,7 @@ const InteractivesPage: FC<InteractivesPageProps> = ({}) => {
                   backgroundPosition: "center",
                 }}
               ></div>
-              <div className="text-3xl">
+              <div className="text-2xl">
                 <p className="text-center text-[#F47920]  font-bold leading-none">
                   Interactive
                 </p>
@@ -231,7 +235,7 @@ const InteractivesPage: FC<InteractivesPageProps> = ({}) => {
             </Link>
 
             <Link
-              href="#"
+              href="https://www.gforcesolution.com/app/2023/LearningOnlineSSS/school/"
               data-aos="zoom-in"
               data-aos-duration="400"
               data-aos-delay="1300"
@@ -254,7 +258,7 @@ const InteractivesPage: FC<InteractivesPageProps> = ({}) => {
                   backgroundPosition: "center",
                 }}
               ></div>
-              <div className="text-3xl">
+              <div className="text-2xl">
                 <p className="text-center text-[#F47920]  font-bold leading-none">
                   Interactive
                 </p>

@@ -54,7 +54,7 @@ export default function DescriptionPage() {
               width={512}
               height={512}
               alt="title"
-              className="w-[400px] z-20  relative "
+              className="w-[350px] z-20  relative "
               draggable={false}
               whileHover={{ scale: 1.1 }}
               animate={{ y: [0, 5, -25], rotate: [0, 0, 0] }}
@@ -98,7 +98,8 @@ export default function DescriptionPage() {
                 fontSize: {
                   xs: "1rem",
 
-                  lg: "1.5rem",
+                  // lg: "1.5rem",
+                  lg: "1.3rem",
                 },
               }}
             >
@@ -126,7 +127,8 @@ export default function DescriptionPage() {
               sx={{
                 textAlign: "center",
                 color: "#F37520",
-                fontSize: "2rem",
+                // fontSize: "2rem",
+                fontSize: "1.8rem",
                 fontWeight: "bold",
               }}
             >
@@ -146,7 +148,7 @@ export default function DescriptionPage() {
                 width={1280}
                 height={1280}
                 alt="FOREGROUND"
-                className="h-[400px] w-auto object-contain"
+                className="h-[350px] w-auto object-contain"
                 draggable={false}
                 animate={{
                   x: [10, -5, 10],
@@ -175,7 +177,7 @@ export default function DescriptionPage() {
                 width={1280}
                 height={1280}
                 alt="FOREGROUND"
-                className="h-[400px] w-auto object-contain "
+                className="h-[350px] w-auto object-contain "
                 draggable={false}
                 animate={{ x: [10, -10, 10], rotate: [5, -5, 5] }}
                 transition={{

@@ -81,7 +81,7 @@ const SituationPage: FC<SituationPageProps> = ({}) => {
           overflow: "visible !important",
         }}
       >
-        <Box className="flex justify-start items-start translate-y-[-80%]">
+        <Box className="flex justify-start items-start translate-y-[-75%]">
           <motion.div className="relative w-fit">
             <Typography
               data-aos="fade-up"
@@ -90,7 +90,8 @@ const SituationPage: FC<SituationPageProps> = ({}) => {
               sx={{
                 textAlign: "top",
                 color: "#138E77",
-                fontSize: "4.5rem",
+                // fontSize: "4.5rem",
+                fontSize: "3.5rem",
                 fontWeight: "bold",
                 textShadow:
                   " 4px 0 #fff, -4px 0 #fff, 0 4px #fff, 0 -4px #fff, 1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff",
@@ -107,7 +108,8 @@ const SituationPage: FC<SituationPageProps> = ({}) => {
               sx={{
                 textAlign: "center",
                 color: "#F47920",
-                fontSize: "4.5rem",
+                // fontSize: "4.5rem",
+                fontSize: "3.5rem",
                 fontWeight: "bold",
               }}
               className=""
@@ -129,7 +131,7 @@ const SituationPage: FC<SituationPageProps> = ({}) => {
             // data-aos-anchor-placement="right-left"
             // data-aos-offset="200"
             data-aos-offset="300"
-            className="absolute top-0 left-[15%] rounded-full bg-[#20C382] w-[22rem] h-[22rem] z-10 text-center grid grid-rows-3 justify-center items-center p-3 cursor-pointer"
+            className="absolute top-0 left-[20%] rounded-full bg-[#20C382] w-[20rem] h-[20rem] z-10 text-center grid grid-rows-3 justify-center items-center p-3 cursor-pointer"
           >
             <div
               data-aos="zoom-im"
@@ -198,7 +200,7 @@ const SituationPage: FC<SituationPageProps> = ({}) => {
             data-aos-easing="ease-out-back"
             // data-aos-offset="300"
             data-aos-offset="400"
-            className="absolute top-0 right-[15%] rounded-full bg-[#20C382] w-[22rem] h-[22rem] z-10 text-center grid grid-rows-3 justify-center items-center p-3  overflow-visibl cursor-pointer"
+            className="absolute top-0 right-[20%] rounded-full bg-[#20C382] w-[20rem] h-[20rem] z-10 text-center grid grid-rows-3 justify-center items-center p-3  overflow-visibl cursor-pointer"
           >
             <div
               data-aos="zoom-in"
@@ -266,7 +268,7 @@ const SituationPage: FC<SituationPageProps> = ({}) => {
             data-aos-easing="ease-out-back"
             // data-aos-offset="500"
             data-aos-offset="500"
-            className="absolute bottom-0 left-[-5%] rounded-full bg-[#20C382] w-[22rem] h-[22rem] z-10 text-center grid grid-rows-3 justify-center items-center p-3 cursor-pointer"
+            className="absolute bottom-0 left-[5%] rounded-full bg-[#20C382] w-[20rem] h-[20rem] z-10 text-center grid grid-rows-3 justify-center items-center p-3 cursor-pointer"
           >
             <div
               data-aos="zoom-in"
@@ -334,7 +336,7 @@ const SituationPage: FC<SituationPageProps> = ({}) => {
             data-aos-easing="ease-out-back"
             // data-aos-offset="700"
             data-aos-offset="600"
-            className="absolute bottom-0 right-[-5%] rounded-full bg-[#20C382] w-[22rem] h-[22rem] z-10 text-center grid grid-rows-3 justify-center items-center p-3  cursor-pointer"
+            className="absolute bottom-0 right-[5%] rounded-full bg-[#20C382] w-[20rem] h-[20rem] z-10 text-center grid grid-rows-3 justify-center items-center p-3  cursor-pointer"
           >
             <div
               data-aos="zoom-in"

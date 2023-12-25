@@ -92,9 +92,13 @@ const GamePage: FC<GamePageProps> = ({}) => {
             href="https://www.gforcesolution.com/app/2023/LearningOnlineSSS/games/src/"
             target="_blank"
           >
-            <img src={GAME_SPLASHSCREEN.src} alt="game splashscreen" />
+            <img
+              src={GAME_SPLASHSCREEN.src}
+              alt="game splashscreen"
+              className="h-full w-auto "
+            />
           </Link>
-          <div className="">START</div>
+          {/* <div className="">START</div> */}
         </Box>
 
         <Container maxWidth="xl" className="absolute h-auto overflow-visible">
@@ -105,7 +109,7 @@ const GamePage: FC<GamePageProps> = ({}) => {
             data-aos-duration="400"
             data-aos-delay="300"
             data-aos-offset="200"
-            className="absolute  left-[5%] translate-x-[-50%] translate-y-[-50%] lg:w-[30rem] h-[30rem] z-10 text-center justify-center items-center p-3 cursor-pointer"
+            className="absolute  left-[10%] translate-x-[-50%] translate-y-[-50%] lg:w-[25rem] h-[25rem] z-10 text-center justify-center items-center cursor-pointer"
           >
             <motion.img
               src={FAT_PERSON_ANIM.src}
@@ -130,7 +134,7 @@ const GamePage: FC<GamePageProps> = ({}) => {
           // data-aos-duration="400"
           // data-aos-delay="1000"
           // data-aos-offset="300"
-          className="absolute top-0 right-0 w-[33%] h-full max-h-[100svh] z-10 text-center grid grid-rows-4  py-[5%] justify-center items-center cursor-pointer"
+          className="absolute top-0 right-0 w-[25%] h-full max-h-[100svh] z-10 text-center grid grid-rows-4  py-[5%] justify-center items-center cursor-pointer"
         >
           <div
             data-aos="zoom-in"
@@ -206,7 +210,7 @@ const GamePage: FC<GamePageProps> = ({}) => {
             data-aos-duration="400"
             data-aos-delay="600"
             data-aos-offset="200"
-            className="flex justify-center items-center"
+            className="flex justify-center items-center w-[80%]"
           >
             <motion.img
               src={START_TEXT.src}

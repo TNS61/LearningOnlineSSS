@@ -79,7 +79,7 @@ const StatisticPage: FC<StatisTicPageProps> = ({}) => {
           overflow: "hidden !important",
         }}
       >
-        <Box className="flex justify-start items-start translate-y-[-100%]">
+        <Box className="flex justify-start items-start translate-y-[-70%] ">
           <motion.div
             className="relative w-fit"
             animate={{
@@ -136,7 +136,7 @@ const StatisticPage: FC<StatisTicPageProps> = ({}) => {
             data-aos-duration="400"
             data-aos-delay="700"
             data-aos-offset="200"
-            className="absolute top-0 left-[10%] rounded-full  w-[25rem] h-[25rem] z-10 text-center grid grid-rows-3 justify-center items-center p-3 cursor-pointer"
+            className="absolute top-0 left-[5%] rounded-full  w-[25rem] h-[25rem] z-10 text-center grid grid-rows-3 justify-center items-center p-3 cursor-pointer"
           >
             <div
               data-aos="zoom-in"
@@ -250,7 +250,7 @@ const StatisticPage: FC<StatisTicPageProps> = ({}) => {
             // data-aos-duration="400"
             // data-aos-delay="1000"
             // data-aos-offset="300"
-            className="absolute top-0 right-[10%] rounded-full w-[25rem] h-[25rem] z-10 text-center grid grid-rows-3 justify-center items-center p-3 overflow-visibl cursor-pointer"
+            className="absolute top-0 right-[5%] rounded-full w-[25rem] h-[25rem] z-10 text-center grid grid-rows-3 justify-center items-center p-3 overflow-visibl cursor-pointer"
           >
             <div
               data-aos="zoom-in-up"
