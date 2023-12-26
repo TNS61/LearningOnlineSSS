@@ -140,7 +140,7 @@ const SituationPage: FC<SituationPageProps> = ({}) => {
               data-aos-delay="1900"
               // data-aos-anchor-placement="right-left"
               // data-aos-offset="200"
-              className="flex items-start justify-center top-[-20%] relative"
+              className="flex items-start justify-center top-[-30%] relative"
             >
               <motion.img
                 src={CHECK_UP.src}
@@ -208,7 +208,7 @@ const SituationPage: FC<SituationPageProps> = ({}) => {
               // data-aos-delay="1150"
               data-aos-delay="2050"
               // data-aos-offset="300"
-              className="flex items-start justify-center top-[-50%] relative"
+              className="flex items-start justify-center top-[-60%] relative"
             >
               <motion.img
                 src={REST.src}
@@ -275,7 +275,7 @@ const SituationPage: FC<SituationPageProps> = ({}) => {
               data-aos-duration="400"
               data-aos-delay="1750"
               // data-aos-offset="500"
-              className="flex items-start justify-center  top-[-30%] relative"
+              className="flex items-start justify-center  top-[-60%] relative"
             >
               <motion.img
                 src={EXCERCISE.src}
@@ -345,7 +345,7 @@ const SituationPage: FC<SituationPageProps> = ({}) => {
               data-aos-delay="1750"
               // data-aos-offset="700"
               data-aos-offset="200"
-              className="flex items-start justify-center top-[-30%] relative"
+              className="flex items-start justify-center top-[-60%] relative"
             >
               <motion.img
                 src={TENSE.src}

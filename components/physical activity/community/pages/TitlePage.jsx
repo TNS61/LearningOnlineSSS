@@ -280,7 +280,7 @@ export default function TitlePage({ className = "" }) {
                 width={1280}
                 height={1280}
                 alt="LAYER2_LEFT"
-                className="w-full absolute left-0 top-0"
+                className="w-full absolute left-0 top-0 z-20"
                 draggable={false}
               />
               <Image
@@ -289,7 +289,7 @@ export default function TitlePage({ className = "" }) {
                 width={1280}
                 height={1280}
                 alt="LAYER2"
-                className="w-full absolute left-0 top-0  "
+                className="w-full absolute left-0 top-0 z-10  "
                 draggable={false}
               />
 
